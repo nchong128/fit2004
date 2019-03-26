@@ -85,7 +85,7 @@ b) Select the minimum element of the sequence
 
 c) Select the median element of the sequence
 - O(n^2) even with quick select algorithm
-- Example case: 
+- Example case: Any list
 
 d) Select an element that is greater than exactly 10% of the others
 - O(n^2) as even with the median it will be O(n^2)
