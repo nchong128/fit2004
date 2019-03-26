@@ -1,0 +1,21 @@
+Requirements
+============
+essay within 10000 words
+
+no words appear more than 50 times
+
+program needs to find the number of words in the story including a count of each word
+
+word count should not include:
+am, is, are, was, were, has, have, had, been, will, shall, may, can, would, should, might, could
+and articles:
+a, an, the
+
+punctuation marks used will be comma, period, question mark, exclamation mark, colon, semicolon, quotation
+
+program will show a list of the words, (sorted in alphabetical order with their counts)
+
+Can also find the k top most frequent words that appear in the essay
+
+Input
+==========

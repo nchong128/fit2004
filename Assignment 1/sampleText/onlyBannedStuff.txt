@@ -1,0 +1,6 @@
+am,is,are,was,were,has,have,had,been
+been,will,shall,may,can,;;would,should,might,
+could, an , a, the, !, :, ", ?, ", !
+
+. ? ?;;;;;;;;;;;;
+    am is
