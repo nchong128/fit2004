@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Week 4/fibonacci.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week 4/coinChange.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 4/Lec-4.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Week 4/Lec-4.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 4/fibonacci.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week 4/fibonacci.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +22,7 @@
     <SUITE FILE_PATH="coverage/FIT2004$countingSort.coverage" NAME="countingSort Coverage Results" MODIFIED="1553648951572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 4" />
     <SUITE FILE_PATH="coverage/FIT2004$TextCount.coverage" NAME="TextCount Coverage Results" MODIFIED="1553426973365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 1" />
     <SUITE FILE_PATH="coverage/FIT2004$run.coverage" NAME="run Coverage Results" MODIFIED="1553431081713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$fibonacci.coverage" NAME="fibonacci Coverage Results" MODIFIED="1553649806784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 4" />
+    <SUITE FILE_PATH="coverage/FIT2004$fibonacci.coverage" NAME="fibonacci Coverage Results" MODIFIED="1553649888579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 4" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -40,11 +40,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week 4/countingSort.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="165" column="19" lean-forward="true" selection-start-line="165" selection-start-column="19" selection-end-line="165" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Week 4/coinChange.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Week 4/fibonacci.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            <state relative-caret-position="244">
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -102,6 +120,7 @@
         <option value="$PROJECT_DIR$/Assignment 1/29808146_Assignment1/TextCount.py" />
         <option value="$PROJECT_DIR$/Week 4/countingSort.py" />
         <option value="$PROJECT_DIR$/Week 4/fibonacci.py" />
+        <option value="$PROJECT_DIR$/Week 4/coinChange.py" />
       </list>
     </option>
   </component>
@@ -111,7 +130,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="width" value="980" />
     <option name="height" value="1031" />
@@ -143,7 +162,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553649794991" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553659649651" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FIT2099" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -372,15 +391,15 @@
       <workItem from="1553424748034" duration="6304000" />
       <workItem from="1553518694417" duration="2687000" />
       <workItem from="1553561287005" duration="8605000" />
-      <workItem from="1553595487118" duration="3929000" />
+      <workItem from="1553595487118" duration="6146000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129862000" />
+    <option name="totallyTimeSpent" value="132079000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="0" width="653" height="687" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4955595" weight="0.3360324" />
@@ -391,7 +410,7 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" weight="0.3298887" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Debug" order="8" visible="true" weight="0.27530363" />
+      <window_info id="Debug" order="8" weight="0.27530363" />
       <window_info anchor="bottom" id="Flutter Inspector" order="0" sideWeight="0.5007949" side_tool="true" weight="0.3556797" />
       <window_info anchor="bottom" id="Flutter Performance" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="2" />
@@ -598,6 +617,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Week 4/fibonacci.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Week 4/countingSort.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -605,10 +631,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Week 4/fibonacci.py">
+    <entry file="file://$PROJECT_DIR$/Week 4/coinChange.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

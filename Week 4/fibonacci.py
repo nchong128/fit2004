@@ -45,7 +45,7 @@ def fibBottomUp(N):
     return memo[-1]
 
 def main():
-    N = 1
+    N = 9
 
     answer = fibBottomUp(N)
 
