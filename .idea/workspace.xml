@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Week 4/coinChange.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment 2/Input/PERSONAL1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment 2/decipher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 4/fibonacci.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week 4/fibonacci.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment 2/Assignment_02.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/Assignment_02.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +22,8 @@
     <SUITE FILE_PATH="coverage/FIT2004$croc.coverage" NAME="croc Coverage Results" MODIFIED="1553391594161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 3" />
     <SUITE FILE_PATH="coverage/FIT2004$reverseInsertionSort.coverage" NAME="reverseInsertionSort Coverage Results" MODIFIED="1553391521747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 3" />
     <SUITE FILE_PATH="coverage/FIT2004$countingSort.coverage" NAME="countingSort Coverage Results" MODIFIED="1553648951572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 4" />
+    <SUITE FILE_PATH="coverage/FIT2004$Tester.coverage" NAME="Tester Coverage Results" MODIFIED="1553865953123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 2" />
+    <SUITE FILE_PATH="coverage/FIT2004$decipher.coverage" NAME="decipher Coverage Results" MODIFIED="1553859691190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 2" />
     <SUITE FILE_PATH="coverage/FIT2004$TextCount.coverage" NAME="TextCount Coverage Results" MODIFIED="1553426973365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 1" />
     <SUITE FILE_PATH="coverage/FIT2004$run.coverage" NAME="run Coverage Results" MODIFIED="1553431081713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 1" />
     <SUITE FILE_PATH="coverage/FIT2004$fibonacci.coverage" NAME="fibonacci Coverage Results" MODIFIED="1553649888579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 4" />
@@ -40,29 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Week 4/countingSort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="165" column="19" lean-forward="true" selection-start-line="165" selection-start-column="19" selection-end-line="165" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Week 4/coinChange.py">
+        <entry file="file://$PROJECT_DIR$/Assignment 2/decipher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Week 4/fibonacci.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            <state relative-caret-position="238">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
         </entry>
@@ -121,6 +107,11 @@
         <option value="$PROJECT_DIR$/Week 4/countingSort.py" />
         <option value="$PROJECT_DIR$/Week 4/fibonacci.py" />
         <option value="$PROJECT_DIR$/Week 4/coinChange.py" />
+        <option value="$PROJECT_DIR$/Assignment 2/Input/PERSONAL1.txt" />
+        <option value="$PROJECT_DIR$/Assignment 2/decipher.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/Test.java" />
+        <option value="$PROJECT_DIR$/Assignment 2/Test.java" />
       </list>
     </option>
   </component>
@@ -130,8 +121,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="949" />
     <option name="width" value="980" />
     <option name="height" value="1031" />
   </component>
@@ -140,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -152,19 +142,29 @@
             <path>
               <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
               <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
-              <item name="Week 4" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553659649651" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FIT2099" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553865931448" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA&#10;GenericSQL" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/angular" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -182,11 +182,12 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LG4000\Google Drive\Uni\2019\FIT2004\Assignment 1\29808146_Assignment1" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LG4000\Google Drive\Uni\2019\FIT2004\Assignment 1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG4000\Documents\FIT2004\Assignment 2" />
+      <recent name="C:\Users\LG4000\Google Drive\Uni\2019\FIT2004\Assignment 1\29808146_Assignment1" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -194,6 +195,7 @@
       <command value="python TextCount.py" />
       <command value="python" />
       <command value="python Week 3/tute3.py" />
+      <command value="cd" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -208,7 +210,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.fibonacci">
+  <component name="RunManager" selected="Python.Tester">
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="FIT2004" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tester" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FIT2004" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Assignment 2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment 2/Tester.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="TextCount" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FIT2004" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -253,20 +286,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="croc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="decipher" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FIT2004" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\LG4000\AppData\Local\Programs\Python\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Week 3" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Assignment 2" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week 3/croc.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment 2/decipher.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -289,28 +322,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week 4/fibonacci.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="quicksort" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="FIT2004" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\LG4000\AppData\Local\Programs\Python\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Week 3" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week 3/quicksort.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -343,19 +354,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.run" />
-      <item itemvalue="Python.croc" />
-      <item itemvalue="Python.quicksort" />
       <item itemvalue="Python.TextCount" />
       <item itemvalue="Python.countingSort" />
       <item itemvalue="Python.fibonacci" />
+      <item itemvalue="Python.decipher" />
+      <item itemvalue="Python.Tester" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Tester" />
+        <item itemvalue="Python.decipher" />
         <item itemvalue="Python.fibonacci" />
         <item itemvalue="Python.countingSort" />
         <item itemvalue="Python.TextCount" />
-        <item itemvalue="Python.quicksort" />
-        <item itemvalue="Python.croc" />
       </list>
     </recent_temporary>
   </component>
@@ -392,17 +403,19 @@
       <workItem from="1553518694417" duration="2687000" />
       <workItem from="1553561287005" duration="8605000" />
       <workItem from="1553595487118" duration="6146000" />
+      <workItem from="1553695181202" duration="179000" />
+      <workItem from="1553834744914" duration="12076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132079000" />
+    <option name="totallyTimeSpent" value="144334000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="653" height="687" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4955595" weight="0.3360324" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4955595" weight="0.3319838" />
       <window_info id="Structure" order="1" sideWeight="0.5044405" side_tool="true" weight="0.30850202" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -410,7 +423,7 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" weight="0.3298887" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Debug" order="8" weight="0.27530363" />
+      <window_info id="Debug" order="8" weight="0.35222673" />
       <window_info anchor="bottom" id="Flutter Inspector" order="0" sideWeight="0.5007949" side_tool="true" weight="0.3556797" />
       <window_info anchor="bottom" id="Flutter Performance" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="2" />
@@ -425,8 +438,8 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49920508" weight="0.6499069" />
-      <window_info anchor="bottom" x="481" y="113" width="730" height="465" id="Run" order="15" type="FLOATING" weight="0.545749" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49920508" weight="0.5325885" />
+      <window_info anchor="bottom" x="9" y="391" width="1262" height="280" id="Run" order="15" type="FLOATING" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -493,6 +506,11 @@
           <url>file://$PROJECT_DIR$/Week 4/fibonacci.py</url>
           <line>51</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Assignment 2/decipher.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -617,24 +635,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Week 4/fibonacci.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Week 4/countingSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="165" column="19" lean-forward="true" selection-start-line="165" selection-start-column="19" selection-end-line="165" selection-end-column="19" />
+        <state relative-caret-position="2805">
+          <caret line="165" column="19" selection-start-line="165" selection-start-column="19" selection-end-line="165" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week 4/coinChange.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="187">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 4/fibonacci.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/PERSONAL1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/W_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Test.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/decipher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>
     </entry>
