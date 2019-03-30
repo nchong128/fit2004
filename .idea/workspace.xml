@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assignment 2/Input/PERSONAL1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment 2/decipher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/Assignment_02.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/Assignment_02.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment 2/decipher.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/decipher.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +19,8 @@
     <SUITE FILE_PATH="coverage/FIT2004$croc.coverage" NAME="croc Coverage Results" MODIFIED="1553391594161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 3" />
     <SUITE FILE_PATH="coverage/FIT2004$reverseInsertionSort.coverage" NAME="reverseInsertionSort Coverage Results" MODIFIED="1553391521747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 3" />
     <SUITE FILE_PATH="coverage/FIT2004$countingSort.coverage" NAME="countingSort Coverage Results" MODIFIED="1553648951572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 4" />
-    <SUITE FILE_PATH="coverage/FIT2004$Tester.coverage" NAME="Tester Coverage Results" MODIFIED="1553865953123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 2" />
-    <SUITE FILE_PATH="coverage/FIT2004$decipher.coverage" NAME="decipher Coverage Results" MODIFIED="1553859691190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 2" />
+    <SUITE FILE_PATH="coverage/FIT2004$Tester.coverage" NAME="Tester Coverage Results" MODIFIED="1553904651464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 2" />
+    <SUITE FILE_PATH="coverage/FIT2004$decipher.coverage" NAME="decipher Coverage Results" MODIFIED="1553904694723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 2" />
     <SUITE FILE_PATH="coverage/FIT2004$TextCount.coverage" NAME="TextCount Coverage Results" MODIFIED="1553426973365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 1" />
     <SUITE FILE_PATH="coverage/FIT2004$run.coverage" NAME="run Coverage Results" MODIFIED="1553431081713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 1" />
     <SUITE FILE_PATH="coverage/FIT2004$fibonacci.coverage" NAME="fibonacci Coverage Results" MODIFIED="1553649888579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 4" />
@@ -43,17 +40,52 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assignment 2/decipher.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_2.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_2.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Assignment 2/Input/W_2.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Assignment 2/Input/W_2.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="17" selection-start-column="17" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -108,10 +140,10 @@
         <option value="$PROJECT_DIR$/Week 4/fibonacci.py" />
         <option value="$PROJECT_DIR$/Week 4/coinChange.py" />
         <option value="$PROJECT_DIR$/Assignment 2/Input/PERSONAL1.txt" />
-        <option value="$PROJECT_DIR$/Assignment 2/decipher.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/Test.java" />
         <option value="$PROJECT_DIR$/Assignment 2/Test.java" />
+        <option value="$PROJECT_DIR$/Assignment 2/decipher.py" />
       </list>
     </option>
   </component>
@@ -121,7 +153,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="949" />
     <option name="width" value="980" />
     <option name="height" value="1031" />
@@ -146,6 +178,12 @@
             </path>
             <path>
               <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
+              <item name="Input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -162,7 +200,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553865931448" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553906457795" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA&#10;GenericSQL" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/angular" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -210,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Tester">
+  <component name="RunManager" selected="Python.decipher">
     <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
       <option name="ALTERNATIVE_JRE_PATH" value="Java 11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -362,8 +400,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Tester" />
         <item itemvalue="Python.decipher" />
+        <item itemvalue="Python.Tester" />
         <item itemvalue="Python.fibonacci" />
         <item itemvalue="Python.countingSort" />
         <item itemvalue="Python.TextCount" />
@@ -404,15 +442,15 @@
       <workItem from="1553561287005" duration="8605000" />
       <workItem from="1553595487118" duration="6146000" />
       <workItem from="1553695181202" duration="179000" />
-      <workItem from="1553834744914" duration="12076000" />
+      <workItem from="1553834744914" duration="16581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144334000" />
+    <option name="totallyTimeSpent" value="148839000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4955595" weight="0.3319838" />
@@ -438,8 +476,8 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49920508" weight="0.5325885" />
-      <window_info anchor="bottom" x="9" y="391" width="1262" height="280" id="Run" order="15" type="FLOATING" weight="0.545749" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49920508" weight="0.94413406" />
+      <window_info anchor="bottom" x="9" y="530" width="1262" height="141" id="Run" order="15" type="FLOATING" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -452,44 +490,6 @@
       <window_info anchor="right" id="Database" order="9" show_stripe_button="false" weight="0.32955465" />
       <window_info anchor="right" id="SciView" order="10" weight="0.32955465" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955595" visible="true" weight="0.30850202" />
-      <window_info id="Structure" order="1" sideWeight="0.5044405" side_tool="true" weight="0.30850202" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Learn" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Debug" order="8" weight="0.43076923" />
-      <window_info anchor="bottom" id="Flutter Performance" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3285968" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32774675" />
-      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="right" id="Flutter Outline" order="0" weight="0.32955465" />
-      <window_info anchor="right" id="Flutter Inspector" order="1" weight="0.32955465" />
-      <window_info anchor="right" id="Coverage" order="2" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.32955465" />
-      <window_info anchor="right" id="Capture Analysis" order="9" />
-      <window_info anchor="right" id="Palette&#9;" order="10" />
-      <window_info anchor="right" id="Database" order="11" weight="0.32955465" />
-      <window_info anchor="right" id="SciView" order="12" weight="0.32955465" />
-      <window_info anchor="right" id="Terminal" order="13" weight="0.35708502" />
-      <window_info anchor="right" x="127" y="126" width="1040" height="483" id="Run" order="14" type="FLOATING" weight="0.545749" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -680,9 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -690,25 +687,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_5.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_4.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/W_3.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/Test.java">
@@ -724,13 +709,71 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Test.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_3.txt">
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/W_5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/W_1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/decipher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="204">
+          <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/W_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/W_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>

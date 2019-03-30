@@ -46,10 +46,10 @@ class Decipher:
     def messageFind(self, inputFileName):
         # TODO: Deal with edge cases, e.g no input, just one letter, multiple lengths, etc.
         # Retrieve words
-        file = open(inputFileName)
-        firstWord = file.readline().strip()
-        secondWord = file.readline()
-        file.close()
+        inputFile = open(inputFileName)
+        firstWord = inputFile.readline().strip()
+        secondWord = inputFile.readline()
+        inputFile.close()
 
         # Get lengths of words
         firstLen = len(firstWord)
@@ -93,6 +93,14 @@ class Decipher:
                 colPos -= 1
 
     def wordBreak(self, dictionaryFileName):
+        # Get the words from the dictionary file and place into a list
+        dictFile = open(dictionaryFileName)
+        dictContentStr = dictFile.read()
+        dictContent = dictContentStr.split("\n")
+        dictFile.close()
+
+        #
+
 
         pass
 
@@ -107,7 +115,9 @@ def main():
 
     test.messageFind(inputFile)
 
-    print(test.getMessage())
+    # print(test.getMessage())
+
+    test.wordBreak(dictFile)
 
 if __name__ == '__main__':
     main()
