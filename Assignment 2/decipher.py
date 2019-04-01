@@ -58,6 +58,7 @@ class Decipher:
         # Early exit of words are the same
         if firstWord == secondWord:
             self.message = firstWord
+            return
 
         # Tabulate our results table of (firstLen + 1) rows and (secondLen+1) columns
         numOfRows = firstLen + 1
@@ -92,30 +93,80 @@ class Decipher:
             else:
                 colPos -= 1
 
+    def printTable(self,table):
+        for row in table:
+            print(row)
+
+    def wordInDict(self, dictList, word):
+        for entry in dictList:
+            if entry == word:
+                return True
+
     def wordBreak(self, dictionaryFileName):
         # Get the words from the dictionary file and place into a list
         dictFile = open(dictionaryFileName)
-        dictContentStr = dictFile.read()
-        dictContent = dictContentStr.split("\n")
+        dictContent = dictFile.read().split("\n")
         dictFile.close()
 
-        #
+        # Make memoization table based on size of message
+        tableLen = len(self.message)
+        memoTable = [[[False] for i in range(tableLen)] for j in range(tableLen)]
+
+        # Fill base case
+        for i in range(tableLen):
+            if self.wordInDict(dictContent, self.message[i]):
+                memoTable[i][i] = [True,i,i]
+            else:
+                memoTable[i][i] = [False]
+
+        # self.printTable(memoTable)
+
+        # Apply recurrence relation top diagonal half of table
+        for gap in range(1, tableLen):
+            for i in range(tableLen - gap):
+                # memoTable[i][i + gap]
+                # If substring is in the dictionary as a whole
+                if self.wordInDict(dictContent, self.message[i:i+gap+1]):
+                    memoTable[i][i+gap] = [True, i, i+gap]
+                elif memoTable[i+1][i + gap][0] or memoTable[i][i + gap - 1][0]:
+                    firstRange = -1
+                    secondRange = -1
+                    if len(memoTable[i+1][i + gap]) > 1:
+                        firstRange = memoTable[i+1][i + gap][2] -memoTable[i+1][i + gap][1]
+
+                    if len(memoTable[i][i+gap-1]) > 1:
+                        secondRange = memoTable[i][i + gap - 1][2] - memoTable[i][i + gap - 1][1]
+
+                    if firstRange > secondRange:
+                        memoTable[i][i+gap] = memoTable[i+1][i+gap]
+                    else:
+                        memoTable[i][i+gap] = memoTable[i][i+gap-1]
+
+        self.printTable(memoTable)
+
+        # Get solution from top right cell
+        outputList = []
+
+        i = 0
+        j = tableLen - 1
+        indexList = []
+
+        while j > 0:
+            outputList.insert(0, self.message[memoTable[i][j][1]:memoTable[i][j][2] + 1])
 
 
-        pass
+
 
     def getMessage(self):
         return self.message
 
 def main():
-    inputFile = 'Input/PERSONAL1.txt'
-    dictFile = 'Input/dictionary_1.txt'
+    inputFile = 'Input/PERSONAL2.txt'
+    dictFile = 'Input/PERSONALDICT2.txt'
 
     test = Decipher()
 
     test.messageFind(inputFile)
-
-    # print(test.getMessage())
 
     test.wordBreak(dictFile)
 
