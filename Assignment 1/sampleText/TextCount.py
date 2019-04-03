@@ -418,7 +418,7 @@ def printKeyValueTable(table):
         print(str(item[0]) + " : " + str(item[1]))
 
 def main():
-    fileName = 'Writing.txt'
+    fileName = 'justOneWord.txt'
 
     # Task 1
     preprocessedWordList = preprocess(fileName)

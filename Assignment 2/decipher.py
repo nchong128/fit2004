@@ -20,6 +20,7 @@ Task 1: Finding the longest subsequence of common alphabets
 - input size is O(n+m) -> program needs a worst case of O(nm) and space complexity of
     -O(nm)
 - Can be upper and lower case only, NO SPACES, NO PUNCTUATIONS
+- Consider O(nm + k)
 
 Task 2: Words separating
 - Will break deciphered message into multiple words using the vocab, input from dictionary.txt
@@ -98,77 +99,118 @@ class Decipher:
             print(row)
 
     def wordInDict(self, dictList, word):
-        for entry in dictList:
-            if entry == word:
-                return True
+        # Returns the index of a given word (+ 1) if a word is found in the dictionary
+        # -1 otherwise
+        location = -1
+        for i in range(len(dictList)):
+            if word == dictList[i]:
+                location = i + 1
+                return location
+        return -1
+
+    def largestWordInList(self, list):
+        largestWord = list[0]
+
+        for word in list:
+            if len(word) > len(largestWord):
+                largestWord = word
+
+        return largestWord
 
     def wordBreak(self, dictionaryFileName):
+        # Courtesy of Shams
+        # TODO: MAKE SURE TO ADJUST THIS FROM 6 TO 0
+        # If dictionary file is not given, return
+        if len(dictionaryFileName) == 6:
+            return
+
         # Get the words from the dictionary file and place into a list
         dictFile = open(dictionaryFileName)
         dictContent = dictFile.read().split("\n")
         dictFile.close()
 
-        # Make memoization table based on size of message
-        tableLen = len(self.message)
-        memoTable = [[[False] for i in range(tableLen)] for j in range(tableLen)]
+        # Filter any empty strings
+        filteredDictContent = []
+        for entry in dictContent:
+            if len(entry) > 0:
+                filteredDictContent.append(entry)
+        dictContent = filteredDictContent
 
-        # Fill base case
-        for i in range(tableLen):
-            if self.wordInDict(dictContent, self.message[i]):
-                memoTable[i][i] = [True,i,i]
-            else:
-                memoTable[i][i] = [False]
+        if len(dictContent) == 0:
+            return
 
-        # self.printTable(memoTable)
+        # Get the largest word, its length will be used as part of the number of rows
+        largestWord = self.largestWordInList(dictContent)
+        numOfRows = 1 + len(largestWord)
 
-        # Apply recurrence relation top diagonal half of table
-        for gap in range(1, tableLen):
-            for i in range(tableLen - gap):
-                # memoTable[i][i + gap]
-                # If substring is in the dictionary as a whole
-                if self.wordInDict(dictContent, self.message[i:i+gap+1]):
-                    memoTable[i][i+gap] = [True, i, i+gap]
-                elif memoTable[i+1][i + gap][0] or memoTable[i][i + gap - 1][0]:
-                    firstRange = -1
-                    secondRange = -1
-                    if len(memoTable[i+1][i + gap]) > 1:
-                        firstRange = memoTable[i+1][i + gap][2] -memoTable[i+1][i + gap][1]
+        # Make memoization table based prev values
+        numOfCols = len(self.message) + 1
+        memoTable = [[0 for i in range(numOfCols)] for j in range(numOfRows)]
 
-                    if len(memoTable[i][i+gap-1]) > 1:
-                        secondRange = memoTable[i][i + gap - 1][2] - memoTable[i][i + gap - 1][1]
+        # Loop over every row and col
+        for i in range(numOfRows):
+            for j in range(numOfCols):
+                # Base case
+                if i == 0 or j == 0 :
+                    memoTable[i][j] = 0
+                    continue
 
-                    if firstRange > secondRange:
-                        memoTable[i][i+gap] = memoTable[i+1][i+gap]
-                    else:
-                        memoTable[i][i+gap] = memoTable[i][i+gap-1]
+                # See if the last i elements form a word which is in the dictionary
+                location = self.wordInDict(dictContent, self.message[j-i: j])
 
-        self.printTable(memoTable)
+                if location != -1:
+                    # Jackpot: Fill in the last i elements with the index of the word
+                    for k in range(j, j-i, -1 ):
+                        memoTable[i][k] = location
+                else:
+                    # Word from last i elements do not fit the dictionary
+                    memoTable[i][j] = memoTable[i-1][j]
 
-        # Get solution from top right cell
-        outputList = []
+        # Iterate over last row and form sentence
+        output = ""
+        lastRow = memoTable[-1][1:]
+        lastNumber = lastRow[0]
+        for i in range(0, len(lastRow)):
+            if lastRow[i] != lastNumber:
+                output += " "
+                lastNumber = lastRow[i]
+            output += self.message[i]
 
-        i = 0
-        j = tableLen - 1
-        indexList = []
-
-        while j > 0:
-            outputList.insert(0, self.message[memoTable[i][j][1]:memoTable[i][j][2] + 1])
-
-
-
+        # Adjust class variable to output
+        self.message = output
 
     def getMessage(self):
         return self.message
 
-def main():
-    inputFile = 'Input/PERSONAL2.txt'
-    dictFile = 'Input/PERSONALDICT2.txt'
+def test():
+    inputFile = 'Input/PERSONAL4.txt'
+    dictFile = 'Input/EMPTYDICT.txt'
 
     test = Decipher()
 
     test.messageFind(inputFile)
 
     test.wordBreak(dictFile)
+
+    print(test.getMessage())
+
+
+def main():
+    # Get files
+    # TODO: MAKE SURE TO REMOVE THE INPUT STRING BELOW AND TO ADJUST THE ERROR CHECKING FOR IT
+    encryptedFile = "Input/" + input("The name of the file, contains two encrypted texts: ")
+    dictFile = "Input/" + input("The name of the dictionary file: ")
+    print("---------------------------------------------------------------------")
+    # TODO: MAKE SURE TO REMOVE THE INPUT STRING BELOW AND TO ADJUST THE ERROR CHECKING FOR IT
+    # Do operations
+    decipher = Decipher()
+    decipher.messageFind(encryptedFile)
+    print("Deciphered message is " + decipher.getMessage())
+    decipher.wordBreak(dictFile)
+    print("True message is " + decipher.getMessage())
+    print("---------------------------------------------------------------------")
+    print("Program end")
+
 
 if __name__ == '__main__':
     main()
