@@ -1,18 +1,4 @@
 '''
-- Two texts which encrypt original message with lots of inessential alphabets
-- e.g. bdceMlonfashxzunivyeriasityb and MondcaitjshukniveptnQrsiXteyY are two encrypted texts
-- contains Monash university
-- Looking for longest sequence of common alphabets
-- No whitespace in the encrypted texts, none between the alphabets
-- Need to find out the words of the deciphered texts
-- List of possible words will put the spaces in decipher text to get original message
-- First will find the largest subsequence of common alphabets from two encrypted texts ->
-    then break the retrieved message into words based on their vocab
-
-- If combination of two or more words of dictionary is another word in the dictionary and present in the message
-    e.g. message is IloveMango, in dictionary (an, Man, go, Mango), Going to use Mango
-- If dictionary is empty -> Deciphered message will be read as a single word
-- If words inside the dictionary do not match -> going to consider the message as a single word
 
 Task 1: Finding the longest subsequence of common alphabets
 - Program will decipher the message from two encrypted texts (encrypted.txt)
@@ -26,11 +12,6 @@ Task 2: Words separating
 - Will break deciphered message into multiple words using the vocab, input from dictionary.txt
 - Function called wordBreak to break initial deciphered message into multiple words using the dictionary
 - Normal condition: break message into available words
-- Use of large words: if the combo of two or more words is also another large word -> use the large word
-    e.g. 'am',`i',`ice',`cream',`icecream',`is',`old',`cold'and the message is`icecreamiscold',Use`icecream is cold' instead of other patterns
-- Empty dictionary : whole message as a single word
-- no matching words: while message as a single word
-- partially matching words: unmatched segment of message will be treated as separate words
 
 - worst case should be O(kM.NM)
 - k is the size of input string
@@ -119,9 +100,8 @@ class Decipher:
 
     def wordBreak(self, dictionaryFileName):
         # Courtesy of Shams
-        # TODO: MAKE SURE TO ADJUST THIS FROM 6 TO 0
         # If dictionary file is not given, return
-        if len(dictionaryFileName) == 6:
+        if len(dictionaryFileName) == 0:
             return
 
         # Get the words from the dictionary file and place into a list
@@ -183,6 +163,7 @@ class Decipher:
         return self.message
 
 def test():
+    #TODO: NEED TO REMOVE
     inputFile = 'Input/PERSONAL4.txt'
     dictFile = 'Input/EMPTYDICT.txt'
 
@@ -196,12 +177,11 @@ def test():
 
 
 def main():
+    # TODO CHANGE THE FILES BELOW TO 'encrypted.txt' and 'dictionary.txt'
     # Get files
-    # TODO: MAKE SURE TO REMOVE THE INPUT STRING BELOW AND TO ADJUST THE ERROR CHECKING FOR IT
-    encryptedFile = "Input/" + input("The name of the file, contains two encrypted texts: ")
-    dictFile = "Input/" + input("The name of the dictionary file: ")
+    encryptedFile = "Input/PERSONAL4.txt"
+    dictFile = "Input/PERSONALDICT4.txt"
     print("---------------------------------------------------------------------")
-    # TODO: MAKE SURE TO REMOVE THE INPUT STRING BELOW AND TO ADJUST THE ERROR CHECKING FOR IT
     # Do operations
     decipher = Decipher()
     decipher.messageFind(encryptedFile)
@@ -210,7 +190,6 @@ def main():
     print("True message is " + decipher.getMessage())
     print("---------------------------------------------------------------------")
     print("Program end")
-
 
 if __name__ == '__main__':
     main()
