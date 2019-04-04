@@ -179,8 +179,8 @@ def test():
 def main():
     # TODO CHANGE THE FILES BELOW TO 'encrypted.txt' and 'dictionary.txt'
     # Get files
-    encryptedFile = "Input/PERSONAL4.txt"
-    dictFile = "Input/PERSONALDICT4.txt"
+    encryptedFile = "Input/PERSONAL2.txt"
+    dictFile = "Input/PERSONALDICT2.txt"
     print("---------------------------------------------------------------------")
     # Do operations
     decipher = Decipher()
