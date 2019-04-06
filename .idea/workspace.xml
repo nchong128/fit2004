@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/Input/PERSONAL2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/Input/PERSONAL2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/Input/PERSONALDICT2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/Input/PERSONALDICT2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/decipher.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/decipher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 5/Lec-5.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Week 5/Lec-5.pptx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +41,11 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 2/decipher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2193">
+            <state relative-caret-position="442">
               <caret line="183" column="31" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
             </state>
           </provider>
@@ -426,11 +424,13 @@
       <workItem from="1554355653832" duration="237000" />
       <workItem from="1554357062563" duration="1266000" />
       <workItem from="1554375885011" duration="277000" />
+      <workItem from="1554445227415" duration="83000" />
+      <workItem from="1554463189839" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182962000" />
+    <option name="totallyTimeSpent" value="183071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -783,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/decipher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
+        <state relative-caret-position="442">
           <caret line="183" column="31" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
         </state>
       </provider>

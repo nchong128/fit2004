@@ -1,0 +1,27 @@
+Tutorial Week 3
+===================
+
+
+Problem 5 
+- Can apply heapsort or mergesort for the list
+- Then maintain i and j 
+- if val at i is different from val at j, increase i by 1 and change value at i into the value at j
+- writing recurrence relations and writing algorithms
+
+Problem 6
+Doesn't put significance into the extra work
+
+Problem 7
+- binary search, heap, divide and conquer
+- k - size of the max heap
+- k log k to insert k items, each taking log k operation
+- then continue taking the max -> Reverse the list -> take the minimum values
+
+Problem 8
+
+3,5,7
+using min heap for task 4
+if no errors occur -> Do not stop the iteration (instead return an empty list)
+Change your output for task 3
+
+Introduction to Algorithms (chapter 2) Corman/Gorman
