@@ -60,7 +60,7 @@ if __name__ == '__main__':
     print('='*50)
     print('Test cases'+' '*(20-len('Test cases'))+'Task-1'+' '*(10-len('Task-1'))+'Task-2'+' '*(10-len('Test-2'))+'Final')
     print('-'*50)
-    for i in range(1,6):
+    for i in range(1,11):
         result = ['','']
         f_encrypt = os.getcwd() + '\Input\encrypted_' + str(i) + '.txt'
         f_dictionary = os.getcwd() + '\Input\dictionary_' + str(i) + '.txt'

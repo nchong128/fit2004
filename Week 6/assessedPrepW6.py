@@ -1,4 +1,4 @@
-'''
+"""
 If we were storing arrays of integers, to prevent clustering of both
 forms, we would want both the position and value of all elements to
 be taken into account.
@@ -21,4 +21,4 @@ Better candidate hash function
 - Hash function can be the sum of each element's value to the power of its
 - position (index + 1)
 - e.g. [10,5,7,2] = (10^1 + 5^2 + 7^3 + 2^4) % 4
-'''
+"""
