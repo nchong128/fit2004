@@ -1,0 +1,5 @@
+cat
+cats
+and
+sand
+dog

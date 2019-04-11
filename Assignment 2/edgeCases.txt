@@ -1,0 +1,19 @@
+# TODO: Deal with edge cases, e.g no input, just one letter, multiple lengths, etc.
+# Edge cases
+# - One line empty [SOLVED]
+# - Both lines empty [SOLVED]
+# - Both lines not matching [SOLVED]
+# - Start and end of both lines are matching [SOLVED]
+# - Start and end of both lines are not [SOLVED]
+# - Variable lengths [SOLVED]
+# - One line a subset of the other [SOLVED]
+
+# Edge cases
+# - Use of large words [SOLVED]
+# - Two words in dictionary together [SOLVED]
+# - Multiple words in dict together [SOLVED]
+# - Empty dictionary [SOLVED]
+# - No matching words [SOLVED]
+# - Start of word isn't a word [SOLVED]
+# - End of word isn't a word [SOLVED]
+# - Word smaller than largest dict word [SOLVED]
