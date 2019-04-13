@@ -4,13 +4,27 @@ class Decipher:
 
     def messageFind(self, inputFileName):
         '''
-        This function finds the longest common subsequence of two texts based on the file's content
+        This function finds the longest common sub-sequence of two texts based on the file's content, basically
+        decrypting our message
+
         Time Complexity: O(nm) where n is the size of the first text and m is the size of the second text
         Space Complexity: O(nm)
         Error handle:
+            - Returns if no input file is given
+        Cases covered:
+            - One line empty
+            - Both lines empty
+            - Both lines not matching
+            - Start and end of both lines are matching
+            - Start and end of both lines are not
+            - Variable lengths
+            - One line being a subset of the other
         Parameter:
+            - inputFileName: String containing the file name of the encrypted words
         Return:
+            - None
         Pre-requisite:
+            - File contains two lines, with each line containing a String
         '''
         if len(inputFileName) == 0:
             return
@@ -66,17 +80,19 @@ class Decipher:
 
     def wordInDict(self, dictList, word):
         '''
-        Time Complexity:
-        Space Complexity:
-        Error handle:
-        Parameter:
-        Return:
-        Pre-requisite:
-        '''
+        Returns the position of a given word (index + 1) if a word is found in the dictionary
 
-        # Returns the index of a given word (+ 1) if a word is found in the dictionary
-        # -1 otherwise
-        location = -1
+        Time Complexity: O(n) where n is the size of the dictionary
+        Space Complexity: O(1)
+        Error handle: None
+        Parameter:
+            - dictList : List of words to check for
+            - word : String of word to find in dictionary
+        Return:
+            - Position of word in dictionary (index + 1)
+            - (-1) otherwise
+        Pre-requisite: N/A
+        '''
         for i in range(len(dictList)):
             if word == dictList[i]:
                 location = i + 1
@@ -85,12 +101,16 @@ class Decipher:
 
     def largestWordInList(self, list):
         '''
-        Time Complexity:
-        Space Complexity:
-        Error handle:
+        This function finds the largest word in the list
+
+        Time Complexity: O(n) where n is the size of the list
+        Space Complexity: O(1)
+        Error handle: None
         Parameter:
+            list : The list to find the largest String
         Return:
-        Pre-requisite:
+            String of the largest String
+        Pre-requisite: List is not empty
         '''
         largestWord = list[0]
 
@@ -102,13 +122,31 @@ class Decipher:
 
     def wordBreak(self, dictionaryFileName):
         '''
-        Time Complexity:
-        Space Complexity:
+        This function separates the decrypted message into multiple words based on a given dictionary.
+
+        Time Complexity: O(kM . NM)
+        Space Complexity: O(kM + NM)
         Error handle:
+            - Early return if dictionary file name is not given
+            - Early return if dictionary contents is empty
+        Cases covered:
+            - Use of large words
+            - Two words in dictionary together
+            - Multiple words in dict together
+            - Empty dictionary
+            - No matching words
+            - Start of word isn't a word
+            - End of word isn't a word
+            - Word smaller than largest dict word
         Parameter:
+            - dictionaryFileName: String of the file name for the dictionary
         Return:
+            - None
         Pre-requisite:
+            - self.message containing the decrypted message
         '''
+
+        # Early exit if dictionary file name is not given
         if len(dictionaryFileName) == 0:
             return
 
@@ -129,7 +167,7 @@ class Decipher:
         largestWord = self.largestWordInList(dictContent)
         numOfRows = 1 + len(largestWord)
 
-        # Make memoization table based prev values
+        # Make DP table based prev values
         numOfCols = len(self.message) + 1
         DP = [[0 for i in range(numOfCols)] for j in range(numOfRows)]
 
@@ -160,6 +198,7 @@ class Decipher:
         wordLength = 0
 
         for i in range(0, len(lastRow)):
+            # If the numbers differ OR the current word being built exceeds its limit -> Add a space and reset
             if (lastRow[i] != lastNumber) or (lastNumber != 0 and (wordLength >= len(dictContent[lastNumber - 1]))):
                 output += " "
                 lastNumber = lastRow[i]
@@ -167,26 +206,16 @@ class Decipher:
             output += self.message[i]
             wordLength += 1
 
-        # Adjust class variable to output
+        # Set class variable 'message' to output
         self.message = output
 
     def getMessage(self):
-        '''
-        Time Complexity:
-        Space Complexity:
-        Error handle:
-        Parameter:
-        Return:
-        Pre-requisite:
-        '''
         return self.message
 
 def main():
-    # TODO: Change files to "The name of the file, contains two encrypted texts : "
-    # TODO: Change files to "The name of the dictionary file : "
     # Get files
-    encryptedFile = "Input/PERSONALFREE.txt"
-    dictFile = "Input/PERSONALDICTFREE.txt"
+    encryptedFile = str(input("The name of the file, contains two encrypted texts : "))
+    dictFile = str(input('The name of the dictionary file : '))
     print("---------------------------------------------------------------------")
 
     # Do operations
