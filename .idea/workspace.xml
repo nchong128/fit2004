@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/Input/PERSONALDICTFREE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/Input/PERSONALDICTFREE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/Input/PERSONALFREE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/Input/PERSONALFREE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/Report_2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/Report_2.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/decipher.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 2/decipher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/edgeCases.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/~$port_2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 2/~WRL0003.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 6/Lec-6.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Week 6/Lec-6.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment 3/trie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +41,17 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,6 +133,7 @@
         <option value="$PROJECT_DIR$/Assignment 2/Input/PERSONALFREE.txt" />
         <option value="$PROJECT_DIR$/Assignment 2/Input/PERSONALDICTFREE.txt" />
         <option value="$PROJECT_DIR$/Assignment 2/decipher.py" />
+        <option value="$PROJECT_DIR$/Assignment 3/trie.py" />
       </list>
     </option>
   </component>
@@ -141,8 +144,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
     <option name="width" value="981" />
     <option name="height" value="1032" />
   </component>
@@ -151,7 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,13 +164,7 @@
             <path>
               <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
               <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
-              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
-              <item name="Assignment 2" type="462c0819:PsiDirectoryNode" />
-              <item name="Input" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment 3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
@@ -180,6 +176,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -358,16 +355,18 @@
       <workItem from="1554957713418" duration="5696000" />
       <workItem from="1555059635486" duration="1704000" />
       <workItem from="1555106990651" duration="36000" />
+      <workItem from="1556778254934" duration="524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216688000" />
+    <option name="totallyTimeSpent" value="217212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955595" visible="true" weight="0.3554656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955595" visible="true" weight="0.13765182" />
       <window_info id="Structure" order="1" sideWeight="0.5044405" side_tool="true" weight="0.30850202" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -461,9 +460,6 @@
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
-        <breakpoint type="dart-exception">
-          <properties />
-        </breakpoint>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
             <option name="notifyOnTerminate" value="true" />
@@ -473,7 +469,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Test.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Test.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -732,6 +727,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="227" column="35" selection-start-line="227" selection-start-column="35" selection-end-line="227" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
