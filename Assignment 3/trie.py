@@ -23,9 +23,11 @@ class PrefixTrie:
 
     def insert(self, entry, i):
         current = self.root
+        current.indexList.append(i)
 
         # Loop over every character in the entry
         for char in entry:
+
             # Get the index of the character based on the trie's type
             index = self.translateChar(char)
 
@@ -45,9 +47,14 @@ class PrefixTrie:
     def retrieve(self, prefix):
         current = self.root
 
+        # If prefix is empty -> No filter is applied so all indices are returned
+        if prefix == 0:
+            return current.indexList
+
         # Iterate until you get to the array node with given prefix
         depth = 0
         for char in prefix:
+
             index = self.translateChar(char)
 
             # If there is an end value at current node
@@ -88,7 +95,7 @@ def findDuplicates(list1, list2):
     while i < len(list1) and j < len(list2):
         if list1[i] == list2[j]:
             # Match found
-            results.append(list1[i])
+            results.append(int(list1[i]))
             i += 1
             j += 1
         elif list1[i] < list2[j]:
@@ -102,7 +109,10 @@ def findDuplicates(list1, list2):
 
 def query(filename, id_prefix, last_name_prefix):
     '''
-
+    - make sure all returned indices are integer datatype.
+    - Edge cases
+        - Both prefixes empty (return all indices)
+        - One empty (return results for non-empty prefix)
     '''
 
     # Place contents into table and retrieve info
@@ -165,11 +175,11 @@ def main():
     # Task 1
     filename_t1 = 'test1.txt'
     # filename = 'Database.txt'
-    id_prefix = '2087652'
-    last_name_prefix = 'AB'
+    id_prefix = ''
+    last_name_prefix = 'A'
 
 
-    # print(query(filename_t1, id_prefix, last_name_prefix))
+    print(query(filename_t1, id_prefix, last_name_prefix))
 
     # Task 2
     filename_t2 = 'test2.txt'
