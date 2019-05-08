@@ -1,5 +1,19 @@
 class PrefixTrie:
     def __init__(self, info, isInt):
+        '''
+        This function initialises a prefix trie based on given entries
+        Time complexity: Best:
+                         Worst:
+        Space complexity: Best:
+                         Worst:
+        Error handling: None
+        Precondition: None
+        Parameter:
+        - info: List of strings representing the entries
+        - isInt:
+        Return:
+        '''
+
         if isInt:
             self.size = 10
         else:
@@ -13,21 +27,56 @@ class PrefixTrie:
             self.insert(info[i], i)
 
     def initialiseArray(self):
+        '''
+        This function initialises a node to be used in a prefix trie
+        Time complexity: Best:
+                         Worst:
+        Space complexity: Best:
+                         Worst:
+        Error handling:
+        Precondition:
+        Parameter:
+        Return:
+        '''
+
         return PrefixArrayNode(self.size)
 
     def translateChar(self, char):
+        '''
+
+        Time complexity: Best:
+                         Worst:
+        Space complexity: Best:
+                         Worst:
+        Error handling:
+        Precondition:
+        Parameter:
+        Return:
+        '''
+
         if self.isInt:
             return int(char)
         else:
             return ord(char) - ord('A')
 
     def insert(self, entry, i):
+        '''
+
+        Time complexity: Best:
+                         Worst:
+        Space complexity: Best:
+                         Worst:
+        Error handling:
+        Precondition:
+        Parameter:
+        Return:
+        '''
+
         current = self.root
         current.indexList.append(i)
 
         # Loop over every character in the entry
         for char in entry:
-
             # Get the index of the character based on the trie's type
             index = self.translateChar(char)
 
@@ -45,6 +94,24 @@ class PrefixTrie:
         current.isEnd = True
 
     def retrieve(self, prefix):
+        '''
+
+        Time complexity: Best:
+                         Worst:
+        Space complexity: Best:
+                         Worst:
+        Error handling:
+        Precondition:
+        Parameter:
+        Return:
+        '''
+
+        '''
+        - make sure all returned indices are integer datatype.
+        - Edge cases
+        - Both prefixes empty (return all indices)
+        - One empty (return results for non-empty prefix)
+        '''
         current = self.root
 
         # If prefix is empty -> No filter is applied so all indices are returned
@@ -54,7 +121,6 @@ class PrefixTrie:
         # Iterate until you get to the array node with given prefix
         depth = 0
         for char in prefix:
-
             index = self.translateChar(char)
 
             # If there is an end value at current node
@@ -68,11 +134,53 @@ class PrefixTrie:
         else:
             return []
 
+    def retrieveReverseSubstring(self, word):
+        results = []
+
+        current = self.root
+        count = 0
+
+        for i in range(len(word)):
+            char = word[i]
+            index = self.translateChar(char)
+            count += 1
+
+            # If there is an end value at current node, go to child at index
+            if current.array[index] is not None:
+                current = current.array[index]
+            else:
+                break
+
+            # Add word to results if the word has a length >= 2
+            if count > 1 and not current.isMarked:
+                # Get the index list and add lists to the results
+                for wordIndex in current.indexList:
+                    results.append([word[:count], int(wordIndex)])
+
+                # Set node as marked
+                current.isMarked = True
+
+
+        return results
+
 class PrefixArrayNode:
     def __init__(self, size):
+        '''
+
+        Time complexity: Best:
+                         Worst:
+        Space complexity: Best:
+                         Worst:
+        Error handling:
+        Precondition:
+        Parameter:
+        Return:
+        '''
+
         self.array = [None] * size
         self.indexList = []
         self.isEnd = False
+        self.isMarked = False
 
 def findDuplicates(list1, list2):
     '''
@@ -90,7 +198,7 @@ def findDuplicates(list1, list2):
         return []
 
     results = []
-    i,j = 0,0
+    i, j = 0, 0
 
     while i < len(list1) and j < len(list2):
         if list1[i] == list2[j]:
@@ -109,12 +217,25 @@ def findDuplicates(list1, list2):
 
 def query(filename, id_prefix, last_name_prefix):
     '''
-    - make sure all returned indices are integer datatype.
-    - Edge cases
-        - Both prefixes empty (return all indices)
-        - One empty (return results for non-empty prefix)
+    This function will query the records found in the file and return the indices of any records that has an ID with the
+    given prefix and a last name with the given prefix.
+    
+    Time complexity: Best: O(T + NM + k + l + nk + nl)
+                     Worst: O(T + NM + k + l + nk + nl)
+    Space complexity: Best: O(T + NM)
+                     Worst: O(T + NM)        
+    Error handling: None (handled inside the other functions)
+    Precondition:
+        - Input file will have indices, ID and phone number as integers
+        - First and last names contain only English alphabets
+        - Email contains only alpha-numeric values with special characters (@ . - _)
+    Parameter:
+        - filename (String): The name of the file to retrieve the records
+        - id_prefix (String): The prefix that the identification numbers are required to have to be returned
+        - last_name_prefix (String): The prefix that the last names are required to have to be returned
+    Return:
+        - Array of integers that contain the indices that match the given prefixes
     '''
-
     # Place contents into table and retrieve info
     info = parseInfo(filename)
 
@@ -130,6 +251,17 @@ def query(filename, id_prefix, last_name_prefix):
     return findDuplicates(idIndices, lastNameIndices)
 
 def parseInfo(filename):
+    '''
+
+    Time complexity: Best:
+                     Worst:
+    Space complexity: Best:
+                     Worst:
+    Error handling:
+    Precondition:
+    Parameter:
+    Return:
+    '''
     # List can be empty
     infoTable = []
     id = []
@@ -150,6 +282,12 @@ def printFancyTable(table):
     for line in table:
         print(line)
 
+def reverseString(string):
+    reversedString = ""
+    for i in range(len(string) - 1, -1, -1):
+        reversedString += string[i]
+    return reversedString
+
 def reverseSubstrings(filename):
     '''
     - File will contain a single line of text (lowercase a-z)
@@ -164,12 +302,34 @@ def reverseSubstrings(filename):
         - P is the total length of all substrings whose reverse appears in the string
     - Space complexity should be O(K^2 + P)
     '''
+    # Get the string from the file
     file = open(filename, 'r')
     line = file.read()
     file.close()
 
-    print(line)
+    # Get the reverse of the line
+    reversedLine = reverseString(line)
 
+    # Find all substrings of the string
+    substrings = []
+    for i in range(len(line)):
+        substrings.append(line[i:])
+
+    # Find all substrings of the reversed string
+    reversedSubstrings = []
+
+    for i in range(len(reversedLine)):
+        reversedSubstrings.append(reversedLine[i:])
+
+    # Create PrefixTrie and insert substrings
+    trie = PrefixTrie(substrings, False)
+
+    # Find reversed substrings
+    results = []
+    for word in reversedSubstrings:
+        results = results + trie.retrieveReverseSubstring(word)
+
+    return results
 
 def main():
     # Task 1
@@ -178,13 +338,26 @@ def main():
     id_prefix = ''
     last_name_prefix = 'A'
 
-
-    print(query(filename_t1, id_prefix, last_name_prefix))
+    # query(filename_t1, id_prefix, last_name_prefix)
 
     # Task 2
     filename_t2 = 'test2.txt'
-    reverseSubstrings(filename_t2)
+    ans = reverseSubstrings(filename_t2)
+
+    print(ans)
 
 
 if __name__ == '__main__':
+    '''
+
+    Time complexity: Best:
+                     Worst:
+    Space complexity: Best:
+                     Worst:
+    Error handling:
+    Precondition:
+    Parameter:
+    Return:
+    '''
     main()
+
