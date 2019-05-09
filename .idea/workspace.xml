@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="389" column="10" lean-forward="true" selection-start-line="389" selection-start-column="10" selection-end-line="389" selection-end-column="10" />
+            <state relative-caret-position="153">
+              <caret line="397" column="21" selection-start-line="397" selection-start-column="21" selection-end-line="397" selection-end-column="21" />
               <folding>
                 <element signature="e#63#736#0" />
                 <element signature="e#777#1112#0" />
@@ -59,7 +59,6 @@
                 <element signature="e#2415#3557#0" />
                 <element signature="e#4450#4829#0" />
                 <element signature="e#4869#5730#0" />
-                <element signature="e#5786#7333#0" />
                 <element signature="e#7364#8079#0" />
                 <element signature="e#8330#8456#0" />
               </folding>
@@ -98,6 +97,7 @@
       <find>todo</find>
       <find>test case</find>
       <find>integer</find>
+      <find>que</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LG4000\Documents\FIT2004\Week 5</dir>
@@ -456,12 +456,12 @@
       <workItem from="1557187407758" duration="1825000" />
       <workItem from="1557191817993" duration="9196000" />
       <workItem from="1557281629729" duration="6139000" />
-      <workItem from="1557382342642" duration="6901000" />
+      <workItem from="1557382342642" duration="8514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276032000" />
+    <option name="totallyTimeSpent" value="277645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,7 +499,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" x="503" y="99" width="582" height="478" id="Run" order="14" type="FLOATING" weight="0.545749" />
+      <window_info anchor="bottom" x="113" y="114" width="1159" height="478" id="Run" order="14" type="FLOATING" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -511,7 +511,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" show_stripe_button="false" weight="0.32955465" />
       <window_info anchor="right" id="SciView" order="10" weight="0.32955465" />
-      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.49920508" side_tool="true" weight="0.65986395" />
+      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.49920508" side_tool="true" weight="0.6591093" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955595" visible="true" weight="0.24453442" />
@@ -580,7 +580,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FIT2004$lol.coverage" NAME="lol Coverage Results" MODIFIED="1557288138117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557388393653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
+    <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557395662546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
     <SUITE FILE_PATH="coverage/FIT2004$tuteWk9.coverage" NAME="tuteWk9 Coverage Results" MODIFIED="1557188151227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 9" />
     <SUITE FILE_PATH="coverage/FIT2004$reverseInt.coverage" NAME="reverseInt Coverage Results" MODIFIED="1557197729280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
     <SUITE FILE_PATH="coverage/FIT2004$tester.coverage" NAME="tester Coverage Results" MODIFIED="1557388074577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
@@ -855,8 +855,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="389" column="10" lean-forward="true" selection-start-line="389" selection-start-column="10" selection-end-line="389" selection-end-column="10" />
+        <state relative-caret-position="153">
+          <caret line="397" column="21" selection-start-line="397" selection-start-column="21" selection-end-line="397" selection-end-column="21" />
           <folding>
             <element signature="e#63#736#0" />
             <element signature="e#777#1112#0" />
@@ -865,7 +865,6 @@
             <element signature="e#2415#3557#0" />
             <element signature="e#4450#4829#0" />
             <element signature="e#4869#5730#0" />
-            <element signature="e#5786#7333#0" />
             <element signature="e#7364#8079#0" />
             <element signature="e#8330#8456#0" />
           </folding>

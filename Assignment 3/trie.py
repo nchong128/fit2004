@@ -363,19 +363,39 @@ def reverseSubstrings(filename):
     return results
 
 def main():
+    lineSeparator = '---------------------------------------------------------------------'
+
     # Task 1
-    filename_t1 = 'test1.txt'
+    print('TASK-1:')
+    print(lineSeparator)
+    task1File = input('Enter the file name of the query database: ')
+    id_prefix = input('Enter the prefix of the identification number: ')
+    last_name_prefix = input('Enter the prefix of the last name: ')
+
+    task1File = 'test1.txt'
     id_prefix = ''
     last_name_prefix = 'A'
 
-    query(filename_t1, id_prefix, last_name_prefix)
+    indices = query(task1File, id_prefix, last_name_prefix)
+
+    print(lineSeparator)
+    print(str(len(indices)) + " record(s) found")
+    for index in indices:
+        print('Index number: ' + str(index))
+
+    print(lineSeparator)
 
     # Task 2
-    filename_t2 = 'test2.txt'
-    ans = reverseSubstrings(filename_t2)
-
-    print(ans)
-
+    print('TASK-2:')
+    task2File = input('Enter the file name for searching reverse substring: ')
+    task2File = 'test2.txt'
+    results = reverseSubstrings(task2File)
+    resultsStr = ""
+    print(lineSeparator)
+    for i in range(len(results) - 1):
+        resultsStr += str(results[i][0]) + "(" + str(results[i][1]) + ") , "
+    resultsStr += str(results[i+1][0]) + "(" + str(results[i+1][1]) + ")"
+    print(resultsStr)
 
 if __name__ == '__main__':
     '''
