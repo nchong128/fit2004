@@ -396,6 +396,8 @@ def main():
         resultsStr += str(results[i][0]) + "(" + str(results[i][1]) + ") , "
     resultsStr += str(results[i+1][0]) + "(" + str(results[i+1][1]) + ")"
     print(resultsStr)
+    print(lineSeparator)
+    print('PROGRAM END')
 
 if __name__ == '__main__':
     '''
