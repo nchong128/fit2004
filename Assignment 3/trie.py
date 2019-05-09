@@ -236,12 +236,12 @@ def query(filename, id_prefix, last_name_prefix):
     Return:
         - Array of integers that contain the indices that match the given prefixes
     '''
-    # Place contents into table and retrieve info
+    # Place ID and last name into table and retrieve info
     info = parseInfo(filename)
 
     # Construct tries based on information
-    idTrie = PrefixTrie(info[1], True)
-    lastNameTrie = PrefixTrie(info[2], False)
+    idTrie = PrefixTrie(info[0], True)
+    lastNameTrie = PrefixTrie(info[1], False)
 
     # Perform queries on tries
     idIndices = idTrie.retrieve(id_prefix)
@@ -252,35 +252,40 @@ def query(filename, id_prefix, last_name_prefix):
 
 def parseInfo(filename):
     '''
-
-    Time complexity: Best:
-                     Worst:
-    Space complexity: Best:
-                     Worst:
+    This function retrieves the contents of a file for task 1.
+    Time complexity: Best: O(NM)
+                     Worst: O(NM)
+    Space complexity: Best: O(NM)
+                     Worst: O(NM)
     Error handling:
+        - Returns a list of 2 empty lists if filename is empty
     Precondition:
+        - file has the format required for Task 1
     Parameter:
+        - filename: Name of the file to extra from
     Return:
+        - Table with
+            first list containing the IDs of the file
+            second list containing the last names of the file
     '''
+
     # List can be empty
-    infoTable = []
     id = []
     lastName = []
 
-    file = open(filename ,'r')
+    if len(filename) == 0:
+        return [id, lastName]
+
+    # Open and extract file contents
+    file = open(filename, 'r')
 
     for line in file:
         line = line.strip().split()
         id.append(line[1])
         lastName.append(line[3])
-        infoTable.append(line)
     file.close()
 
-    return [infoTable, id, lastName]
-
-def printFancyTable(table):
-    for line in table:
-        print(line)
+    return [id, lastName]
 
 def reverseString(string):
     reversedString = ""
