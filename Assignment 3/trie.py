@@ -141,6 +141,17 @@ class PrefixTrie:
             return []
 
     def retrieveReverseSubstring(self, word):
+        '''
+
+        Time complexity: Best:
+                         Worst:
+        Space complexity: Best:
+                         Worst:
+        Error handling:
+        Precondition:
+        Parameter:
+        Return:
+        '''
         results = []
 
         current = self.root
@@ -321,22 +332,35 @@ def reverseString(string):
 
 def reverseSubstrings(filename):
     '''
-    - File will contain a single line of text (lowercase a-z)
-    - Need to find all substrings of length > 1 whose reverse also exists in the text
-    - Return a list of lists (each inner list contains two values)
-        - First val: substring with length 1 whose reverse exists in the string
-        - Second value will be index of the substring in the input text
-    - No order requirement
+    This function finds all substrings in the text of length > 1 whose reverse also exists in the text.
 
-    - Needs to run in O(K^2 + P) time
-        - K = total number of characters in the input string
-        - P is the total length of all substrings whose reverse appears in the string
-    - Space complexity should be O(K^2 + P)
+    Time complexity: Best: O(K^2 + P) where K is the total number of characters in the file and P is the total length
+                           of all substrings whose reverse appears in the string
+                     Worst:O(K^2 + P)
+    Space complexity: Best:O(K^2 + P)
+                     Worst:O(K^2 + P)
+    Error handling: See Cases
+    Cases:
+        - Filename is empty -> Return empty list
+        - File is empty -> Return empty list
+        - Normal case (done)
+
+    Precondition: filename contains a single string of alphabets (lowercase only)
+    Parameter: filename (String) to find special substrings from
+    Return: List containing lists of [substring, index]
     '''
+    # If filename is empty
+    if len(filename) == 0:
+        return []
+
     # Get the string from the file
     file = open(filename, 'r')
-    line = file.read()
+    line = file.readline()
     file.close()
+
+    # If file is empty
+    if len(line) == 0:
+        return []
 
     # Get the reverse of the line
     reversedLine = reverseString(line)
@@ -388,7 +412,7 @@ def main():
     # Task 2
     print('TASK-2:')
     task2File = input('Enter the file name for searching reverse substring: ')
-    task2File = 'test2.txt'
+    task2File = 'test3.txt'
     results = reverseSubstrings(task2File)
     resultsStr = ""
     print(lineSeparator)
@@ -400,16 +424,5 @@ def main():
     print('PROGRAM END')
 
 if __name__ == '__main__':
-    '''
-
-    Time complexity: Best:
-                     Worst:
-    Space complexity: Best:
-                     Worst:
-    Error handling:
-    Precondition:
-    Parameter:
-    Return:
-    '''
     main()
 
