@@ -1,19 +1,20 @@
 class PrefixTrie:
     def __init__(self, info, isInt):
         '''
-        This function initialises a prefix trie based on given entries
-        Time complexity: Best:
-                         Worst:
-        Space complexity: Best:
-                         Worst:
+        This function initialises a prefix trie and fills it based on given entries
+        Time complexity: Best: O(T) where T is the number of characters in all ID numbers and all last names
+                         Worst: O(T)
+        Space complexity: Best: O(T)
+                         Worst: O(T)
         Error handling: None
-        Precondition: None
+        Precondition:
+            - info should have entries as all numbers or all strings
         Parameter:
         - info: List of strings representing the entries
-        - isInt:
-        Return:
+        - isInt: Whether the entries are all numbers or not
+        Return: None
         '''
-
+        # Sets the node array's size based on if the trie is going to be filled with numbers or letters
         if isInt:
             self.size = 10
         else:
@@ -23,35 +24,38 @@ class PrefixTrie:
         self.isInt = isInt
         self.root = self.initialiseArray()
 
+        # Iterate over all entries and insert it into the trie
         for i in range(len(info)):
             self.insert(info[i], i)
 
     def initialiseArray(self):
         '''
         This function initialises a node to be used in a prefix trie
-        Time complexity: Best:
-                         Worst:
-        Space complexity: Best:
-                         Worst:
-        Error handling:
-        Precondition:
-        Parameter:
-        Return:
+        Time complexity: Best: O(1)
+                         Worst: O(1)
+        Space complexity: Best: O(1)
+                         Worst: O(1)
+        Error handling: None
+        Precondition: None
+        Parameter: None
+        Return: A PrefixArrayNode.
         '''
-
         return PrefixArrayNode(self.size)
 
     def translateChar(self, char):
         '''
-
-        Time complexity: Best:
-                         Worst:
-        Space complexity: Best:
-                         Worst:
-        Error handling:
+        This function translates a character into an index value.
+        Time complexity: Best: O(1)
+                         Worst: O(1)
+        Space complexity: Best: O(1)
+                         Worst: O(1)
+        Error handling: None
         Precondition:
+            - char is alphanumeric
         Parameter:
+            - char (string) to be converted
         Return:
+            - (int) to reference the index in the array
         '''
 
         if self.isInt:
@@ -61,17 +65,20 @@ class PrefixTrie:
 
     def insert(self, entry, i):
         '''
+        This function inserts an entry into the trie. At each node, it will store the value of i. This allows each node
+        to store the indices of the entries that uses the node.
 
-        Time complexity: Best:
-                         Worst:
-        Space complexity: Best:
-                         Worst:
-        Error handling:
-        Precondition:
+        Time complexity: Best: O(N) where N is the length of the entry
+                         Worst: O(N)
+        Space complexity: Best: O(N)
+                         Worst: O(N)
+        Error handling: None
+        Precondition: Entry is either all numbers or all letters (based on isInt)
         Parameter:
-        Return:
+            - entry (String) to be added into the trie
+        Return: None
         '''
-
+        # Start at the root
         current = self.root
         current.indexList.append(i)
 
@@ -95,22 +102,21 @@ class PrefixTrie:
 
     def retrieve(self, prefix):
         '''
+        Retrieves the indices of the entries that use a given prefix.
 
-        Time complexity: Best:
-                         Worst:
-        Space complexity: Best:
-                         Worst:
-        Error handling:
-        Precondition:
+        Time complexity: Best: O(N) where N is the length of the prefix
+                         Worst: O(N)
+        Space complexity: Best: O(1)
+                         Worst: O(1)
+        Error handling: If prefix is empty, returns the indexList at the root
+        Cases:
+            - Prefix is empty -> Retrieve all at root as no 'filter' is applied
+            - Prefix does not match against any query -> Returns an empty list
+        Precondition: None
         Parameter:
+            - prefix (String) to be traversed down the trie in order to find the index list
         Return:
-        '''
-
-        '''
-        - make sure all returned indices are integer datatype.
-        - Edge cases
-        - Both prefixes empty (return all indices)
-        - One empty (return results for non-empty prefix)
+            - indexList (List) that contains the indices that match the prefix
         '''
         current = self.root
 
@@ -160,21 +166,20 @@ class PrefixTrie:
                 # Set node as marked
                 current.isMarked = True
 
-
         return results
 
 class PrefixArrayNode:
     def __init__(self, size):
         '''
-
-        Time complexity: Best:
-                         Worst:
-        Space complexity: Best:
-                         Worst:
-        Error handling:
-        Precondition:
-        Parameter:
-        Return:
+        Constructor
+        Time complexity: Best: O(1)
+                         Worst: O(1)
+        Space complexity: Best: O(1)
+                         Worst: O(1)
+        Error handling: None
+        Precondition: None
+        Parameter: size of the array
+        Return: None
         '''
 
         self.array = [None] * size
@@ -184,14 +189,23 @@ class PrefixArrayNode:
 
 def findDuplicates(list1, list2):
     '''
-    Finds any elements that are present in both lists
-    List is sorted and contains no duplicates
+    This function finds any elements that are present in both lists
+    Time complexity: Best: O(N + M) where N is the length of the first list and M is the length of the second list
+                     Worst: O(N + M)
+    Space complexity: Best: O(N + M)
+                     Worst: O(N + M)
+    Error handling: None
     Cases:
         - One list empty, one not (done)
         - Both lists empty (done)
         - Both lists same size (done)
         - Uneven sized list (done)
         - Both lists with 1 element (done)
+    Precondition: Both lists are sorted and contains no duplicates
+    Parameter:
+        - list1 (list) to be searched for duplicates with the other list
+        - list2 (list) to be searched for duplicates with the other list
+    Return:
     '''
     # Check for empty lists
     if len(list1) == 0 or len(list2) == 0:
@@ -288,6 +302,18 @@ def parseInfo(filename):
     return [id, lastName]
 
 def reverseString(string):
+    '''
+    This function reverses a string
+    Time complexity: Best: O(N) where N is the string's length
+                     Worst: O(N)
+    Space complexity: Best: O(N)
+                     Worst: O(N)
+    Error handling: None
+    Precondition: None
+    Parameter:
+        - string (String) to be reversed
+    Return: reversed string
+    '''
     reversedString = ""
     for i in range(len(string) - 1, -1, -1):
         reversedString += string[i]
@@ -339,11 +365,10 @@ def reverseSubstrings(filename):
 def main():
     # Task 1
     filename_t1 = 'test1.txt'
-    # filename = 'Database.txt'
     id_prefix = ''
     last_name_prefix = 'A'
 
-    # query(filename_t1, id_prefix, last_name_prefix)
+    query(filename_t1, id_prefix, last_name_prefix)
 
     # Task 2
     filename_t2 = 'test2.txt'
