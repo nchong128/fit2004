@@ -359,11 +359,18 @@ def reverseSubstrings(filename):
                      Worst:O(K^2 + P)
     Space complexity: Best:O(K^2 + P)
                      Worst:O(K^2 + P)
-    Error handling: See Cases
-    Cases:
+    Error handling:
         - Filename is empty -> Return empty list
         - File is empty -> Return empty list
-        - Normal case (done)
+    Cases:
+        - File is empty [DONE]
+        - filename is empty [DONE]
+        - word is one letter long [DONE]
+        - extra blank line in file [DONE]
+        - two letters [DONE]
+        - three letter (e.g. aaa) [DONE]
+        - Normal case [DONE]
+        - Different capital letters [DONE]
     Precondition: filename contains a single string of alphabets (lowercase only)
     Parameter: filename (String) to find special substrings from
     Return: List containing lists of [substring, index]
@@ -377,8 +384,8 @@ def reverseSubstrings(filename):
     line = file.readline()
     file.close()
 
-    # If file is empty
-    if len(line) == 0:
+    # If file contents are empty
+    if len(line) < 2:
         return []
 
     # Get the reverse of the line
@@ -412,9 +419,9 @@ def main():
     print('TASK-1:')
     print(lineSeparator)
 
-    # task1File = input('Enter the file name of the query database: ')
-    # id_prefix = input('Enter the prefix of the identification number: ')
-    # last_name_prefix = input('Enter the prefix of the last name: ')
+    task1File = input('Enter the file name of the query database: ')
+    id_prefix = input('Enter the prefix of the identification number: ')
+    last_name_prefix = input('Enter the prefix of the last name: ')
 
     # TODO: DELETE THESE HARDCODED STUFF
     task1File = 'test1.txt'
@@ -432,7 +439,7 @@ def main():
 
     # Task 2
     print('TASK-2:')
-    # task2File = input('Enter the file name for searching reverse substring: ')
+    task2File = input('Enter the file name for searching reverse substring: ')
 
     # TODO: DELETE THESE HARDCODED STUFF
     task2File = 'test3.txt'
@@ -440,10 +447,17 @@ def main():
     results = reverseSubstrings(task2File)
     resultsStr = ""
     print(lineSeparator)
-    for i in range(len(results) - 1):
-        resultsStr += str(results[i][0]) + "(" + str(results[i][1]) + ") , "
-    resultsStr += str(results[i+1][0]) + "(" + str(results[i+1][1]) + ")"
-    print(resultsStr)
+
+    if len(results) == 0:
+        print("No results found")
+    elif len(results) == 1:
+        print(str(results[0][0]) + "(" + str(results[0][1]) + ")")
+    else:
+        for i in range(len(results) - 1):
+            resultsStr += str(results[i][0]) + "(" + str(results[i][1]) + ") , "
+        resultsStr += str(results[i+1][0]) + "(" + str(results[i+1][1]) + ")"
+        print(resultsStr)
+
     print(lineSeparator)
     print('PROGRAM END')
 

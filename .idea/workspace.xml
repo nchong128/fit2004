@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assignment 3/test4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 3/Report_A3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/Report_A3.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 3/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/test1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment 3/test3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/test3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment 3/trie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/trie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="248" column="49" selection-start-line="248" selection-start-column="49" selection-end-line="248" selection-end-column="49" />
+              <caret line="461" column="24" lean-forward="true" selection-start-line="461" selection-start-column="24" selection-end-line="461" selection-end-column="24" />
               <folding>
                 <element signature="e#63#1120#0" />
                 <element signature="e#1161#1549#0" />
@@ -70,6 +67,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assignment 3/test3.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -175,9 +177,9 @@
         <option value="$PROJECT_DIR$/Week 9/tuteWk9.py" />
         <option value="$PROJECT_DIR$/Week 1/lol.py" />
         <option value="$PROJECT_DIR$/Assignment 3/test2.txt" />
-        <option value="$PROJECT_DIR$/Assignment 3/test3.txt" />
         <option value="$PROJECT_DIR$/Assignment 3/test4.txt" />
         <option value="$PROJECT_DIR$/Assignment 3/test1.txt" />
+        <option value="$PROJECT_DIR$/Assignment 3/test3.txt" />
         <option value="$PROJECT_DIR$/Assignment 3/trie.py" />
       </list>
     </option>
@@ -272,7 +274,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tester">
+  <component name="RunManager" selected="Python.trie">
     <configuration default="true" type="Java Scratch">
       <option name="ALTERNATIVE_JRE_PATH" value="Java 11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -401,8 +403,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tester" />
         <item itemvalue="Python.trie" />
+        <item itemvalue="Python.tester" />
         <item itemvalue="Python.lol" />
         <item itemvalue="Python.reverseInt" />
         <item itemvalue="Python.tuteWk9" />
@@ -477,12 +479,12 @@
       <workItem from="1557191817993" duration="9196000" />
       <workItem from="1557281629729" duration="6139000" />
       <workItem from="1557382342642" duration="9074000" />
-      <workItem from="1557397421411" duration="6123000" />
+      <workItem from="1557397421411" duration="9029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284328000" />
+    <option name="totallyTimeSpent" value="287234000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,7 +507,7 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" weight="0.32955465" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Debug" order="8" weight="0.78741497" />
+      <window_info id="Debug" order="8" weight="0.3222672" />
       <window_info anchor="bottom" id="Flutter Inspector" order="0" sideWeight="0.5007949" side_tool="true" weight="0.3556797" />
       <window_info anchor="bottom" id="Flutter Performance" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="2" />
@@ -520,7 +522,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" x="754" y="126" width="1141" height="460" id="Run" order="14" type="FLOATING" weight="0.545749" />
+      <window_info anchor="bottom" x="527" y="173" width="1117" height="436" id="Run" order="14" type="FLOATING" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -601,10 +603,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FIT2004$lol.coverage" NAME="lol Coverage Results" MODIFIED="1557288138117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557454337282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
+    <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557458164531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
     <SUITE FILE_PATH="coverage/FIT2004$tuteWk9.coverage" NAME="tuteWk9 Coverage Results" MODIFIED="1557188151227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 9" />
     <SUITE FILE_PATH="coverage/FIT2004$reverseInt.coverage" NAME="reverseInt Coverage Results" MODIFIED="1557197729280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$tester.coverage" NAME="tester Coverage Results" MODIFIED="1557454394999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
+    <SUITE FILE_PATH="coverage/FIT2004$tester.coverage" NAME="tester Coverage Results" MODIFIED="1557455638915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_1.txt">
@@ -857,13 +859,6 @@
     <entry file="file://$PROJECT_DIR$/Assignment 3/Task-1_text.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 3/test3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 3/test4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -878,10 +873,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 3/test3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="248" column="49" selection-start-line="248" selection-start-column="49" selection-end-line="248" selection-end-column="49" />
+          <caret line="461" column="24" lean-forward="true" selection-start-line="461" selection-start-column="24" selection-end-line="461" selection-end-column="24" />
           <folding>
             <element signature="e#63#1120#0" />
             <element signature="e#1161#1549#0" />
