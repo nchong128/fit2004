@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assignment 3/test3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment 3/trie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/trie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="423" column="24" lean-forward="true" selection-start-line="423" selection-start-column="24" selection-end-line="423" selection-end-column="24" />
+            <state relative-caret-position="187">
+              <caret line="164" column="44" selection-start-line="164" selection-start-column="44" selection-end-line="164" selection-end-column="44" />
               <folding>
                 <element signature="e#63#1120#0" />
                 <element signature="e#1161#1549#0" />
@@ -64,7 +62,6 @@
                 <element signature="e#7681#9236#0" />
                 <element signature="e#9267#10187#0" />
                 <element signature="e#10220#10692#0" />
-                <element signature="e#12119#13276#0" />
               </folding>
             </state>
           </provider>
@@ -461,12 +458,12 @@
       <workItem from="1557191817993" duration="9196000" />
       <workItem from="1557281629729" duration="6139000" />
       <workItem from="1557382342642" duration="9074000" />
-      <workItem from="1557397421411" duration="2233000" />
+      <workItem from="1557397421411" duration="3364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280438000" />
+    <option name="totallyTimeSpent" value="281569000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -864,8 +861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="423" column="24" lean-forward="true" selection-start-line="423" selection-start-column="24" selection-end-line="423" selection-end-column="24" />
+        <state relative-caret-position="187">
+          <caret line="164" column="44" selection-start-line="164" selection-start-column="44" selection-end-line="164" selection-end-column="44" />
           <folding>
             <element signature="e#63#1120#0" />
             <element signature="e#1161#1549#0" />
@@ -877,7 +874,6 @@
             <element signature="e#7681#9236#0" />
             <element signature="e#9267#10187#0" />
             <element signature="e#10220#10692#0" />
-            <element signature="e#12119#13276#0" />
           </folding>
         </state>
       </provider>

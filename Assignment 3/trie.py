@@ -142,21 +142,27 @@ class PrefixTrie:
 
     def retrieveReverseSubstring(self, word):
         '''
+        This function returns the prefixes that match this given word along with the indices of the last node of that
+        word. More detail in the explanations.
 
-        Time complexity: Best:
-                         Worst:
-        Space complexity: Best:
-                         Worst:
-        Error handling:
-        Precondition:
+        Time complexity: Best: O(NM) == O(P) where N is the length of the longest prefix for the word, the indices
+                               at the last letter. NOTE: THIS IS EQUIVALENT TO O(P).
+                         Worst: O(NM) == O(P)
+        Space complexity: Best: O(NM) == O(P)
+                         Worst: O(NM) == O(P)
+        Error handling: None
+        Precondition: The trie is filled with all of the suffixes of a word
         Parameter:
+            - word (String): The word to check any prefixes of that word
         Return:
+            - A list containing lists of prefixes that match the word AND the index in which the word occurs
         '''
         results = []
 
         current = self.root
         count = 0
 
+        # Loop over every letter in the word
         for i in range(len(word)):
             char = word[i]
             index = self.translateChar(char)
