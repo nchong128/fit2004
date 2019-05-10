@@ -256,6 +256,19 @@ def query(filename, id_prefix, last_name_prefix):
     Space complexity: Best: O(T + NM)
                      Worst: O(T + NM)        
     Error handling: None (handled inside the other functions)
+    Cases:
+        - filename is empty [DONE]
+        - file is empty [DONE]
+        - id_prefix is empty [DONE]
+        - last_name_prefix is empty [DONE]
+        - Both prefixes empty [DONE]
+        - ID is one digit (0-9) [DONE]
+        - Last name is one letter (A or z) [DONE]
+        - last_name_prefix has different capital letters [DONE]
+        - Normal case [DONE]
+        - All last names are the same [DONE]
+        - id_prefix longer than trie length [DONE]
+        - last_name_prefix longer than trie length [DONE]
     Precondition:
         - Input file will have indices, ID and phone number as integers
         - First and last names contain only English alphabets
@@ -267,18 +280,18 @@ def query(filename, id_prefix, last_name_prefix):
     Return:
         - Array of integers that contain the indices that match the given prefixes
     '''
-    # Place ID and last name into table and retrieve info
+    # Place ID and last name into table and retrieve info               # O(NM)
     info = parseInfo(filename)
 
-    # Construct tries based on information
+    # Construct tries based on information                              # O(T)
     idTrie = PrefixTrie(info[0], True)
     lastNameTrie = PrefixTrie(info[1], False)
 
     # Perform queries on tries
-    idIndices = idTrie.retrieve(id_prefix)
-    lastNameIndices = lastNameTrie.retrieve(last_name_prefix)
+    idIndices = idTrie.retrieve(id_prefix)                              # O(k + nk)
+    lastNameIndices = lastNameTrie.retrieve(last_name_prefix)           # O(l + nl)
 
-    # Find indices that are present in both lists and return
+    # Find indices that are present in both lists and return            # O(nk + nl)
     return findDuplicates(idIndices, lastNameIndices)
 
 def parseInfo(filename):
@@ -312,8 +325,9 @@ def parseInfo(filename):
 
     for line in file:
         line = line.strip().split()
-        id.append(line[1])
-        lastName.append(line[3])
+        if len(line) > 0:
+            id.append(line[1])
+            lastName.append(line[3])
     file.close()
 
     return [id, lastName]
@@ -350,7 +364,6 @@ def reverseSubstrings(filename):
         - Filename is empty -> Return empty list
         - File is empty -> Return empty list
         - Normal case (done)
-
     Precondition: filename contains a single string of alphabets (lowercase only)
     Parameter: filename (String) to find special substrings from
     Return: List containing lists of [substring, index]
@@ -398,13 +411,15 @@ def main():
     # Task 1
     print('TASK-1:')
     print(lineSeparator)
-    task1File = input('Enter the file name of the query database: ')
-    id_prefix = input('Enter the prefix of the identification number: ')
-    last_name_prefix = input('Enter the prefix of the last name: ')
 
+    # task1File = input('Enter the file name of the query database: ')
+    # id_prefix = input('Enter the prefix of the identification number: ')
+    # last_name_prefix = input('Enter the prefix of the last name: ')
+
+    # TODO: DELETE THESE HARDCODED STUFF
     task1File = 'test1.txt'
-    id_prefix = ''
-    last_name_prefix = 'A'
+    id_prefix = '2'
+    last_name_prefix = ''
 
     indices = query(task1File, id_prefix, last_name_prefix)
 
@@ -417,8 +432,11 @@ def main():
 
     # Task 2
     print('TASK-2:')
-    task2File = input('Enter the file name for searching reverse substring: ')
+    # task2File = input('Enter the file name for searching reverse substring: ')
+
+    # TODO: DELETE THESE HARDCODED STUFF
     task2File = 'test3.txt'
+
     results = reverseSubstrings(task2File)
     resultsStr = ""
     print(lineSeparator)
