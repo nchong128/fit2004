@@ -391,23 +391,23 @@ def reverseSubstrings(filename):
     # Get the reverse of the line
     reversedLine = reverseString(line)
 
-    # Find all substrings of the string
-    substrings = []
+    # Find all suffixes of the string
+    suffixList = []
     for i in range(len(line)):
-        substrings.append(line[i:])
+        suffixList.append(line[i:])
 
-    # Find all substrings of the reversed string
-    reversedSubstrings = []
+    # Find all suffixes of the reversed string
+    reversedSuffixList = []
 
     for i in range(len(reversedLine)):
-        reversedSubstrings.append(reversedLine[i:])
+        reversedSuffixList.append(reversedLine[i:])
 
-    # Create PrefixTrie and insert substrings
-    trie = PrefixTrie(substrings, False)
+    # Create PrefixTrie and insert normal suffixes
+    trie = PrefixTrie(suffixList, False)
 
-    # Find reversed substrings
+    # Find reversed substrings by insertion of reversed suffixes
     results = []
-    for word in reversedSubstrings:
+    for word in reversedSuffixList:
         results = results + trie.retrieveReverseSubstring(word)
 
     return results
@@ -423,11 +423,6 @@ def main():
     id_prefix = input('Enter the prefix of the identification number: ')
     last_name_prefix = input('Enter the prefix of the last name: ')
 
-    # TODO: DELETE THESE HARDCODED STUFF
-    task1File = 'test1.txt'
-    id_prefix = '2'
-    last_name_prefix = ''
-
     indices = query(task1File, id_prefix, last_name_prefix)
 
     print(lineSeparator)
@@ -440,9 +435,6 @@ def main():
     # Task 2
     print('TASK-2:')
     task2File = input('Enter the file name for searching reverse substring: ')
-
-    # TODO: DELETE THESE HARDCODED STUFF
-    task2File = 'test3.txt'
 
     results = reverseSubstrings(task2File)
     resultsStr = ""

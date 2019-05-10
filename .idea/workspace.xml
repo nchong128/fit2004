@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assignment 3/test3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/test3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment 3/Report_A3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/Report_A3.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment 3/trie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/trie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="461" column="24" lean-forward="true" selection-start-line="461" selection-start-column="24" selection-end-line="461" selection-end-column="24" />
+            <state relative-caret-position="238">
+              <caret line="436" column="78" selection-start-line="436" selection-start-column="78" selection-end-line="436" selection-end-column="78" />
               <folding>
                 <element signature="e#63#1120#0" />
                 <element signature="e#1161#1549#0" />
@@ -119,6 +119,7 @@
       <find>ab</find>
       <find>a</find>
       <find>AB</find>
+      <find>marked</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LG4000\Documents\FIT2004\Week 5</dir>
@@ -191,9 +192,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="948" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+    <option name="x" value="-11" />
+    <option name="width" value="980" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -274,7 +275,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.trie">
+  <component name="RunManager" selected="Python.tester">
     <configuration default="true" type="Java Scratch">
       <option name="ALTERNATIVE_JRE_PATH" value="Java 11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -403,8 +404,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.trie" />
         <item itemvalue="Python.tester" />
+        <item itemvalue="Python.trie" />
         <item itemvalue="Python.lol" />
         <item itemvalue="Python.reverseInt" />
         <item itemvalue="Python.tuteWk9" />
@@ -479,12 +480,12 @@
       <workItem from="1557191817993" duration="9196000" />
       <workItem from="1557281629729" duration="6139000" />
       <workItem from="1557382342642" duration="9074000" />
-      <workItem from="1557397421411" duration="9029000" />
+      <workItem from="1557397421411" duration="17568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287234000" />
+    <option name="totallyTimeSpent" value="295773000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,7 +523,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" x="527" y="173" width="1117" height="436" id="Run" order="14" type="FLOATING" weight="0.545749" />
+      <window_info anchor="bottom" x="156" y="128" width="1111" height="430" id="Run" order="14" type="FLOATING" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -603,10 +604,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FIT2004$lol.coverage" NAME="lol Coverage Results" MODIFIED="1557288138117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557458164531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
+    <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557459268002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
     <SUITE FILE_PATH="coverage/FIT2004$tuteWk9.coverage" NAME="tuteWk9 Coverage Results" MODIFIED="1557188151227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 9" />
     <SUITE FILE_PATH="coverage/FIT2004$reverseInt.coverage" NAME="reverseInt Coverage Results" MODIFIED="1557197729280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$tester.coverage" NAME="tester Coverage Results" MODIFIED="1557455638915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
+    <SUITE FILE_PATH="coverage/FIT2004$tester.coverage" NAME="tester Coverage Results" MODIFIED="1557484332500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assignment 2/Input/dictionary_1.txt">
@@ -878,8 +879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="461" column="24" lean-forward="true" selection-start-line="461" selection-start-column="24" selection-end-line="461" selection-end-column="24" />
+        <state relative-caret-position="238">
+          <caret line="436" column="78" selection-start-line="436" selection-start-column="78" selection-end-line="436" selection-end-column="78" />
           <folding>
             <element signature="e#63#1120#0" />
             <element signature="e#1161#1549#0" />
