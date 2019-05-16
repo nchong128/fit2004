@@ -19,12 +19,17 @@ class DirectedGraph:
         fileInfo = []
         for line in file:
             line = line.strip().split(" ")
+
+            line[0] = int(line[0])
+            line[1] = int(line[1])
+            line[2] = float(line[2])
+
             fileInfo.append(line)
 
         file.close()
 
         # Retrieve number of vertices to make based on the last row
-        numOfVertices = int(fileInfo[-1][0]) + 1
+        numOfVertices = fileInfo[-1][0] + 1
 
         # Make Vertex instances and add to graph attribute
         for i in range(numOfVertices):
@@ -33,13 +38,13 @@ class DirectedGraph:
         # Now create Edges between the Vertices based on the info table
         for i in range(len(fileInfo)):
             # Retrieve source vertex based on line
-            sourceVertex = self.graph[int(fileInfo[i][0])]
+            sourceVertex = self.graph[fileInfo[i][0]]
 
             # Retrieve target vertex based on line
-            targetVertex = self.graph[int(fileInfo[i][1])]
+            targetVertex = self.graph[fileInfo[i][1]]
 
             # Retrieve weight based on line
-            weight = float(fileInfo[i][2])
+            weight = fileInfo[i][2]
 
             # Add edge between source vertex and target vertex
             sourceVertex.connections.append(Edge(targetVertex, weight))
@@ -56,6 +61,17 @@ class DirectedGraph:
             final += "\n"
 
         return final
+
+    def quickestPath(self, source, target):
+        '''
+        :param source: Starting point of the travel
+        :param target: Destination point of the travel
+        :return:
+        tuple:
+        - list(contains nodes in the order of the quickest path traversal from source to target)
+        - time storing the total time required from reaching the target from the source
+        '''
+        pass
 
 
 def main():
