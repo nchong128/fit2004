@@ -4,7 +4,8 @@ class Vertex:
         self.connections = []
 
 class Edge:
-    def __init__(self, v, weight):
+    def __init__(self, u, v, weight):
+        self.u = u
         self.v = v
         self.w = weight
 
@@ -47,7 +48,7 @@ class DirectedGraph:
             weight = fileInfo[i][2]
 
             # Add edge between source vertex and target vertex
-            sourceVertex.connections.append(Edge(targetVertex, weight))
+            sourceVertex.connections.append(Edge(sourceVertex, targetVertex, weight))
 
     def __str__(self):
         final = ""
@@ -70,7 +71,15 @@ class DirectedGraph:
         tuple:
         - list(contains nodes in the order of the quickest path traversal from source to target)
         - time storing the total time required from reaching the target from the source
+
+        -- Should return ([],-1) if path does not exist
+
+        Complexity
+        - Time complexity of O(E log V)
+        - Space complexity O(E + V) (original graph)
         '''
+
+
         pass
 
 
@@ -79,6 +88,8 @@ def main():
     directedGraph = DirectedGraph()
 
     directedGraph.buildGraph(filename)
+
+    print(directedGraph)
 
 
 if __name__ == "__main__":
