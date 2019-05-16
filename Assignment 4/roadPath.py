@@ -1,33 +1,10 @@
-# class Vertex:
-#     def __init__(self, num):
-#         self.num = num
-#         self.connections = []
-#
-# class Edge:
-#     def __init__(self, u, v, weight):
-#         self.u = u
-#         self.v = v
-#         self.w = weight
-#
-# class DirectedGraph:
-#     def __init__(self, n):
-#         self.graph = [Vertex(i) for i in range(1,n+1)]
-#
-#     def addEdge(self, index1, index2, weight):
-#         # Create new edge
-#         edge = Edge(self.graph[index1-1], self.graph[index2-1], weight)
-#
-#         # Ensure list is updated
-#         self.graph[index1-1].connections.append(self.graph[index2-1])
-
 class Vertex:
     def __init__(self, num):
         self.num = num
         self.connections = []
 
 class Edge:
-    def __init__(self, u, v, weight):
-        self.u = u
+    def __init__(self, v, weight):
         self.v = v
         self.w = weight
 
@@ -53,9 +30,37 @@ class DirectedGraph:
         for i in range(numOfVertices):
             self.graph.append(Vertex(i))
 
-        print(self.graph)
+        # Now create Edges between the Vertices based on the info table
+        print(fileInfo)
 
-        pass
+        for i in range(len(fileInfo)):
+            # Retrieve source vertex based on line
+            sourceVertex = self.graph[int(fileInfo[i][0])]
+
+            # Retrieve target vertex based on line
+            targetVertex = self.graph[int(fileInfo[i][1])]
+
+            # Retrieve weight based on line
+            weight = float(fileInfo[i][2])
+
+            # Add edge between source vertex and target vertex
+            sourceVertex.connections.append(Edge(targetVertex, weight))
+
+        print(self)
+
+    def __str__(self):
+        final = ""
+
+        for vertex in self.graph:
+            final += "{}|".format(vertex.num)
+
+            for edge in vertex.connections:
+                final += " --{}--> {},".format(edge.w, edge.v.num)
+
+            final += "\n"
+
+        return final
+
 
 def main():
     filename = "basicGraph.txt"

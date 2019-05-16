@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assignment 4/roadPath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment 4/roadPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/roadPath.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,17 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment 4/basicGraph.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="68">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -89,7 +79,6 @@
       <find>pdf</find>
       <find>offset</find>
       <find>TEST</find>
-      <find>print</find>
       <find>DEF WORD</find>
       <find>wordInDict</find>
       <find>TODO</find>
@@ -102,6 +91,8 @@
       <find>a</find>
       <find>AB</find>
       <find>marked</find>
+      <find>print</find>
+      <find>Vertex</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LG4000\Documents\FIT2004\Week 5</dir>
@@ -194,6 +185,11 @@
               <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
               <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
               <item name="Assignment 4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 9" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -467,12 +463,12 @@
       <workItem from="1557810041450" duration="12000" />
       <workItem from="1557836521570" duration="1777000" />
       <workItem from="1557841350691" duration="1243000" />
-      <workItem from="1557987986676" duration="2815000" />
+      <workItem from="1557987986676" duration="4785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305319000" />
+    <option name="totallyTimeSpent" value="307289000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,7 +506,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" x="107" y="190" width="1099" height="418" id="Run" order="14" type="FLOATING" weight="0.545749" />
+      <window_info anchor="bottom" x="366" y="152" width="778" height="418" id="Run" order="14" type="FLOATING" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -596,7 +592,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FIT2004$lol.coverage" NAME="lol Coverage Results" MODIFIED="1557288138117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$roadPath.coverage" NAME="roadPath Coverage Results" MODIFIED="1557999086733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
+    <SUITE FILE_PATH="coverage/FIT2004$roadPath.coverage" NAME="roadPath Coverage Results" MODIFIED="1558001062696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
     <SUITE FILE_PATH="coverage/FIT2004$pairsSum.coverage" NAME="pairsSum Coverage Results" MODIFIED="1557998633970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
     <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557459268002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
     <SUITE FILE_PATH="coverage/FIT2004$tuteWk9.coverage" NAME="tuteWk9 Coverage Results" MODIFIED="1557188151227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 9" />
@@ -832,13 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Week 9/tuteWk9.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/camera.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -848,17 +837,24 @@
     <entry file="file://$PROJECT_DIR$/Assignment 4/toll.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Week 9/tuteWk9.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/basicGraph.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
