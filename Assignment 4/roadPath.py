@@ -31,8 +31,6 @@ class DirectedGraph:
             self.graph.append(Vertex(i))
 
         # Now create Edges between the Vertices based on the info table
-        print(fileInfo)
-
         for i in range(len(fileInfo)):
             # Retrieve source vertex based on line
             sourceVertex = self.graph[int(fileInfo[i][0])]
@@ -45,8 +43,6 @@ class DirectedGraph:
 
             # Add edge between source vertex and target vertex
             sourceVertex.connections.append(Edge(targetVertex, weight))
-
-        print(self)
 
     def __str__(self):
         final = ""

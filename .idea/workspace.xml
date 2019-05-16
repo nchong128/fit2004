@@ -49,8 +49,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="136">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#18#95#0" />
+                <element signature="e#112#185#0" />
+                <element signature="e#865#880#0" />
+                <element signature="e#308#1380#0" />
+                <element signature="e#1651#1903#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -463,12 +470,12 @@
       <workItem from="1557810041450" duration="12000" />
       <workItem from="1557836521570" duration="1777000" />
       <workItem from="1557841350691" duration="1243000" />
-      <workItem from="1557987986676" duration="4785000" />
+      <workItem from="1557987986676" duration="4909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307289000" />
+    <option name="totallyTimeSpent" value="307413000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -518,7 +525,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" show_stripe_button="false" weight="0.32955465" />
       <window_info anchor="right" id="SciView" order="10" show_stripe_button="false" weight="0.32955465" />
-      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.49920508" side_tool="true" weight="0.6591093" />
+      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.49920508" weight="0.6591093" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955595" visible="true" weight="0.24939272" />
@@ -853,8 +860,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="136">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#18#95#0" />
+            <element signature="e#112#185#0" />
+            <element signature="e#865#880#0" />
+            <element signature="e#308#1380#0" />
+            <element signature="e#1651#1903#0" />
+          </folding>
         </state>
       </provider>
     </entry>
