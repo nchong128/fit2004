@@ -73,6 +73,19 @@ class DirectedGraph:
     def __init__(self):
         self.graph = []
 
+    def __str__(self):
+        final = ""
+
+        for vertex in self.graph:
+            final += "{}|".format(vertex.num)
+
+            for edge in vertex.connections:
+                final += " --{}--> {},".format(edge.w, edge.v.num)
+
+            final += "\n"
+
+        return final
+
     def buildGraph(self, filename_roads):
         # Read file and place info all into a table
         file = open(filename_roads, 'r')
@@ -110,24 +123,10 @@ class DirectedGraph:
             # Add edge between source vertex and target vertex
             sourceVertex.connections.append(Edge(sourceVertex, targetVertex, weight))
 
-    def __str__(self):
-        final = ""
-
-        for vertex in self.graph:
-            final += "{}|".format(vertex.num)
-
-            for edge in vertex.connections:
-                final += " --{}--> {},".format(edge.w, edge.v.num)
-
-            final += "\n"
-
-        return final
-
     def quickestPath(self, source, target):
         '''
         TODO:
          - Deal with edge cases
-         - Deal with weird floating point bug
 
         :param source: Starting point of the travel
         :param target: Destination point of the travel
@@ -195,6 +194,22 @@ class DirectedGraph:
             totalDistance = -1
 
         return (path, totalDistance)
+
+    def augmentGraph(self, filename_camera, filename_toll):
+        pass
+
+    def quickestSafePath(self, source, target):
+        '''
+        Now account for a safe path
+        - None of the vertices within the path contain a red-light camera
+        - None of the edges along the path are toll roads
+
+        Same inputs and outputs
+        Complexity
+        - Time O(E log V)
+        - Space O(E + V)
+        '''
+        pass
 
 def main():
     filename = "basicGraph.txt"
