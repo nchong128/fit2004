@@ -68,7 +68,6 @@ class DirectedGraph:
 
     def quickestPath(self, source, target):
         '''
-        https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/
 
         :param source: Starting point of the travel
         :param target: Destination point of the travel
@@ -97,11 +96,11 @@ class DirectedGraph:
         discovered.add(0, srcVertex.num)
 
         # Loop over as long as there is a vertex in the discovered min-heap
-        while len(discovered.array) > 0:
+        while discovered.count > 0:
             [uDist, uNum] = discovered.extractMin()
 
             # Ensure the entry is not out of date
-            if distances[uNum] < uDist:
+            if distances[uNum] <= uDist:
                 # Get edges adjacent to current vertex
                 adjacentEdges = self.graph[uNum].connections
 
@@ -110,9 +109,25 @@ class DirectedGraph:
                         # Update distance entry and add entry to min-heap
                         distances[edge.v.num] = distances[uNum] + edge.w
                         pred[edge.v.num] = uNum
-                        discovered.push(distances[edge.v.num], edge.v.num)
-        return [distances,pred]
-        pass
+                        discovered.add(distances[edge.v.num], edge.v.num)
+
+        # Now find the path from the source to the target and return
+        return self.tracePath(srcVertex, tgtVertex, distances, pred)
+
+    def tracePath(self, srcVertex, tgtVertex, distances, pred):
+        current = tgtVertex.num
+        path = []
+
+        while current != srcVertex.num:
+            path.insert(0,current)
+            current = pred[current]
+
+        path.insert(0,srcVertex.num)
+
+        # Get total distance too
+        totalDistance = distances[tgtVertex.num]
+
+        return (path, totalDistance)
 
 class MinHeap:
     # Acquired from my FIT1008 notes and adjusted to work with
@@ -179,7 +194,8 @@ def main():
 
     print(directedGraph)
 
-    directedGraph.quickestPath("0","9")
+    res = directedGraph.quickestPath("4","3")
+    print(res)
 
 
 if __name__ == "__main__":
