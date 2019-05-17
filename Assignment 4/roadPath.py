@@ -12,123 +12,6 @@ class Edge:
         self.v = v
         self.w = weight
 
-class DirectedGraph:
-    def __init__(self):
-        self.graph = []
-
-    def buildGraph(self, filename_roads):
-        # Read file and place info all into a table
-        file = open(filename_roads, 'r')
-
-        fileInfo = []
-        for line in file:
-            line = line.strip().split(" ")
-
-            line[0] = int(line[0])
-            line[1] = int(line[1])
-            line[2] = float(line[2])
-
-            fileInfo.append(line)
-
-        file.close()
-
-        # Retrieve number of vertices to make based on the last row
-        numOfVertices = fileInfo[-1][0] + 1
-
-        # Make Vertex instances and add to graph attribute
-        for i in range(numOfVertices):
-            self.graph.append(Vertex(i))
-
-        # Now create Edges between the Vertices based on the info table
-        for i in range(len(fileInfo)):
-            # Retrieve source vertex based on line
-            sourceVertex = self.graph[fileInfo[i][0]]
-
-            # Retrieve target vertex based on line
-            targetVertex = self.graph[fileInfo[i][1]]
-
-            # Retrieve weight based on line
-            weight = fileInfo[i][2]
-
-            # Add edge between source vertex and target vertex
-            sourceVertex.connections.append(Edge(sourceVertex, targetVertex, weight))
-
-    def __str__(self):
-        final = ""
-
-        for vertex in self.graph:
-            final += "{}|".format(vertex.num)
-
-            for edge in vertex.connections:
-                final += " --{}--> {},".format(edge.w, edge.v.num)
-
-            final += "\n"
-
-        return final
-
-    def quickestPath(self, source, target):
-        '''
-
-        :param source: Starting point of the travel
-        :param target: Destination point of the travel
-        :return:
-        tuple:
-        - list(contains nodes in the order of the quickest path traversal from source to target)
-        - time storing the total time required from reaching the target from the source
-
-        -- Should return ([],-1) if path does not exist
-
-        Complexity
-        - Time complexity of O(E log V)
-        - Space complexity O(E + V) (original graph)
-        '''
-        # Get source and target vertex
-        srcVertex = self.graph[int(source)]
-        tgtVertex = self.graph[int(target)]
-
-        # Initialise lists and min-heap
-        distances = [math.inf for i in range(len(self.graph))]
-        pred = [0 for i in range(len(self.graph))]
-
-        distances[srcVertex.num] = 0
-
-        discovered = MinHeap()
-        discovered.add(0, srcVertex.num)
-
-        # Loop over as long as there is a vertex in the discovered min-heap
-        while discovered.count > 0:
-            [uDist, uNum] = discovered.extractMin()
-
-            # Ensure the entry is not out of date
-            if distances[uNum] <= uDist:
-                # Get edges adjacent to current vertex
-                adjacentEdges = self.graph[uNum].connections
-
-                for edge in adjacentEdges:
-                    if distances[edge.v.num] > distances[uNum] + edge.w:
-                        # Update distance entry and add entry to min-heap
-                        distances[edge.v.num] = distances[uNum] + edge.w
-                        pred[edge.v.num] = uNum
-                        discovered.add(distances[edge.v.num], edge.v.num)
-
-        # Now find the path from the source to the target and return
-        return self.tracePath(srcVertex, tgtVertex, distances, pred)
-
-    def tracePath(self, srcVertex, tgtVertex, distances, pred):
-        current = tgtVertex.num
-        path = []
-
-        while current != srcVertex.num:
-            path.insert(0,current)
-            current = pred[current]
-
-        path.insert(0,srcVertex.num)
-
-        # Get total distance too
-        totalDistance = distances[tgtVertex.num]
-
-        return (path, totalDistance)
-
 class MinHeap:
     # Acquired from my FIT1008 notes and adjusted to work with
     # (key = distance (int), value = vertex number (int))
@@ -186,6 +69,133 @@ class MinHeap:
             self.sink(1)
             return oldRoot
 
+class DirectedGraph:
+    def __init__(self):
+        self.graph = []
+
+    def buildGraph(self, filename_roads):
+        # Read file and place info all into a table
+        file = open(filename_roads, 'r')
+
+        fileInfo = []
+        for line in file:
+            line = line.strip().split(" ")
+
+            line[0] = int(line[0])
+            line[1] = int(line[1])
+            line[2] = float(line[2])
+
+            fileInfo.append(line)
+
+        file.close()
+
+        # Retrieve number of vertices to make based on the last row
+        numOfVertices = fileInfo[-1][0] + 1
+
+        # Make Vertex instances and add to graph attribute
+        for i in range(numOfVertices):
+            self.graph.append(Vertex(i))
+
+        # Now create Edges between the Vertices based on the info table
+        for i in range(len(fileInfo)):
+            # Retrieve source vertex based on line
+            sourceVertex = self.graph[fileInfo[i][0]]
+
+            # Retrieve target vertex based on line
+            targetVertex = self.graph[fileInfo[i][1]]
+
+            # Retrieve weight based on line
+            weight = fileInfo[i][2]
+
+            # Add edge between source vertex and target vertex
+            sourceVertex.connections.append(Edge(sourceVertex, targetVertex, weight))
+
+    def __str__(self):
+        final = ""
+
+        for vertex in self.graph:
+            final += "{}|".format(vertex.num)
+
+            for edge in vertex.connections:
+                final += " --{}--> {},".format(edge.w, edge.v.num)
+
+            final += "\n"
+
+        return final
+
+    def quickestPath(self, source, target):
+        '''
+        TODO:
+         - Deal with edge cases
+         - Deal with weird floating point bug
+
+        :param source: Starting point of the travel
+        :param target: Destination point of the travel
+        :return:
+        tuple:
+        - list(contains nodes in the order of the quickest path traversal from source to target)
+        - time storing the total time required from reaching the target from the source
+
+        -- Should return ([],-1) if path does not exist
+
+        Complexity
+        - Time complexity of O(E log V)
+        - Space complexity O(E + V) (original graph)
+        '''
+        # Get source and target vertex
+        srcVertex = self.graph[int(source)]
+        tgtVertex = self.graph[int(target)]
+
+        # Initialise lists and min-heap
+        distances = [math.inf for i in range(len(self.graph))]
+        pred = [0 for i in range(len(self.graph))]
+
+        distances[srcVertex.num] = 0
+
+        discovered = MinHeap()
+        discovered.add(0, srcVertex.num)
+
+        # Loop over as long as there is a vertex in the discovered min-heap
+        while discovered.count > 0:
+            [uMinDist, u] = discovered.extractMin()
+
+            # Ensure the entry is not out of date
+            if distances[u] <= uMinDist:
+                # Get edges adjacent to current vertex
+                adjacentEdges = self.graph[u].connections
+
+                for edge in adjacentEdges:
+                    v = edge.v.num
+                    edgeWeight = edge.w
+
+                    if distances[v] > distances[u] + edgeWeight:
+                        # Update distance entry and add entry to min-heap
+                        distances[v] = distances[u] + edgeWeight
+                        pred[v] = u
+                        discovered.add(distances[v], v)
+
+        # Now find the path from the source to the target and return
+        return self.tracePath(srcVertex, tgtVertex, distances, pred)
+
+    def tracePath(self, srcVertex, tgtVertex, distances, pred):
+        # Get total distance
+        totalDistance = distances[tgtVertex.num]
+
+        if totalDistance != math.inf:
+            current = tgtVertex.num
+            path = []
+
+            while current != srcVertex.num:
+                path.insert(0,current)
+                current = pred[current]
+
+            path.insert(0,srcVertex.num)
+        else:
+            path = []
+            totalDistance = -1
+
+        return (path, totalDistance)
+
 def main():
     filename = "basicGraph.txt"
     directedGraph = DirectedGraph()
@@ -194,7 +204,7 @@ def main():
 
     print(directedGraph)
 
-    res = directedGraph.quickestPath("4","3")
+    res = directedGraph.quickestPath("9", "0")
     print(res)
 
 
