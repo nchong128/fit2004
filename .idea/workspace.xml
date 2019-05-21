@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 4/roadPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/roadPath.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="211" column="12" lean-forward="true" selection-start-line="211" selection-start-column="12" selection-end-line="211" selection-end-column="12" />
+            <state relative-caret-position="158">
+              <caret line="163" column="16" selection-start-line="163" selection-start-column="16" selection-end-line="163" selection-end-column="16" />
               <folding>
                 <element signature="e#32#109#0" />
                 <element signature="e#127#222#0" />
@@ -171,7 +170,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="width" value="980" />
     <option name="height" value="1031" />
@@ -485,12 +484,12 @@
       <workItem from="1558054952206" duration="41000" />
       <workItem from="1558055301620" duration="476000" />
       <workItem from="1558055897987" duration="6457000" />
-      <workItem from="1558068963337" duration="4564000" />
+      <workItem from="1558068963337" duration="5928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323159000" />
+    <option name="totallyTimeSpent" value="324523000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -502,8 +501,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="653" height="687" extended-state="1" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4955595" weight="0.24777327" />
       <window_info id="Structure" order="1" sideWeight="0.5044405" side_tool="true" weight="0.30850202" />
@@ -540,7 +538,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" show_stripe_button="false" weight="0.32955465" />
       <window_info anchor="right" id="SciView" order="10" weight="0.32955465" />
-      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.49920508" weight="0.43238866" />
+      <window_info active="true" anchor="right" id="Terminal" order="11" sideWeight="0.49920508" visible="true" weight="0.80323887" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955595" visible="true" weight="0.24939272" />
@@ -875,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="211" column="12" lean-forward="true" selection-start-line="211" selection-start-column="12" selection-end-line="211" selection-end-column="12" />
+        <state relative-caret-position="158">
+          <caret line="163" column="16" selection-start-line="163" selection-start-column="16" selection-end-line="163" selection-end-column="16" />
           <folding>
             <element signature="e#32#109#0" />
             <element signature="e#127#222#0" />
