@@ -1,6 +1,5 @@
 import math
 
-
 class Vertex:
     def __init__(self, num):
         self.num = num
@@ -125,8 +124,9 @@ class DirectedGraph:
 
     def quickestPath(self, source, target):
         '''
-        TODO:
-         - Deal with edge cases
+        Cases
+            - Source = target
+            -
 
         :param source: Starting point of the travel
         :param target: Destination point of the travel
@@ -185,10 +185,10 @@ class DirectedGraph:
             path = []
 
             while current != srcVertex.num:
-                path.insert(0,current)
+                path.insert(0, current)
                 current = pred[current]
 
-            path.insert(0,srcVertex.num)
+            path.insert(0, srcVertex.num)
         else:
             path = []
             totalDistance = -1
@@ -196,7 +196,44 @@ class DirectedGraph:
         return (path, totalDistance)
 
     def augmentGraph(self, filename_camera, filename_toll):
-        pass
+        # Retrieve banned vertices from file
+        cameraFile = open(filename_camera, 'r')
+        bannedVertices = []
+        for line in cameraFile:
+            if len(line) > 0:
+                bannedVertices.append(int(line.strip()))
+        cameraFile.close()
+
+        # Remove all banned vertices
+        for vertex in bannedVertices:
+            self.graph[vertex] = Vertex(vertex)
+
+        # Retrieve banned edges from file
+        tollFile = open(filename_toll, 'r')
+        bannedEdges = []
+        for line in tollFile:
+            line = line.strip().split(" ")
+            if len(line) == 2:
+                line[0] = int(line[0])
+                line[1] = int(line[1])
+                bannedEdges.append(line)
+        tollFile.close()
+
+        # Remove all banned edges
+        for bannedEdge in bannedEdges:
+            # Get source vertex for banned edge
+            srcVertex = self.graph[bannedEdge[0]]
+
+            # Search for an edge from source vertex to the target vertex
+            for i in range(len(srcVertex.connections)):
+                # Match found, remove the edge
+                if srcVertex.connections[i].v.num == bannedEdge[1]:
+                    edgeToRemove = srcVertex.connections[i]
+                    srcVertex.connections.remove(edgeToRemove)
+                    break
+
+        # TODO: Delete this
+        print(self)
 
     def quickestSafePath(self, source, target):
         '''
@@ -204,24 +241,43 @@ class DirectedGraph:
         - None of the vertices within the path contain a red-light camera
         - None of the edges along the path are toll roads
 
+        Cases:
+            - No vertices banned
+            - Source vertex banned
+            - Target vertex banned
+
+        TODO: Bug where if target vertex is banned -> It can still be accessible
+
         Same inputs and outputs
         Complexity
         - Time O(E log V)
         - Space O(E + V)
         '''
-        pass
+        return self.quickestPath(source, target)
+
+
+
 
 def main():
-    filename = "basicGraph.txt"
+    ### TASK 1
+    task1FileName = "basicGraph.txt"
     directedGraph = DirectedGraph()
 
-    directedGraph.buildGraph(filename)
+    directedGraph.buildGraph(task1FileName)
 
-    print(directedGraph)
+    # print(directedGraph)
+    #
+    # res1 = directedGraph.quickestPath("9", "9")
+    # print(res1)
 
-    res = directedGraph.quickestPath("9", "0")
-    print(res)
+    ### TASK 2
+    filename_camera, filename_toll = 'camera.txt', 'toll.txt'
 
+    directedGraph.augmentGraph(filename_camera, filename_toll)
+
+    res2 = directedGraph.quickestSafePath("4","0")
+
+    print(res2)
 
 if __name__ == "__main__":
     main()
