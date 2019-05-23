@@ -4,12 +4,20 @@ class Vertex:
     def __init__(self, num):
         self.num = num
         self.connections = []
+        self.banned = False
+
+    def ban(self):
+        self.banned = True
 
 class Edge:
     def __init__(self, u, v, weight):
         self.u = u
         self.v = v
         self.w = weight
+        self.banned = False
+
+    def ban(self):
+        self.banned = True
 
 class MinHeap:
     # Acquired from my FIT1008 notes and adjusted to work with
@@ -204,9 +212,9 @@ class DirectedGraph:
                 bannedVertices.append(int(line.strip()))
         cameraFile.close()
 
-        # Remove all banned vertices
+        # Ban vertices
         for vertex in bannedVertices:
-            self.graph[vertex] = Vertex(vertex)
+            self.graph[vertex].ban()
 
         # Retrieve banned edges from file
         tollFile = open(filename_toll, 'r')
@@ -226,14 +234,11 @@ class DirectedGraph:
 
             # Search for an edge from source vertex to the target vertex
             for i in range(len(srcVertex.connections)):
-                # Match found, remove the edge
+                # Match found, ban the edge
                 if srcVertex.connections[i].v.num == bannedEdge[1]:
-                    edgeToRemove = srcVertex.connections[i]
-                    srcVertex.connections.remove(edgeToRemove)
+                    edgeToBan = srcVertex.connections[i]
+                    edgeToBan.ban()
                     break
-
-        # TODO: Delete this
-        print(self)
 
     def quickestSafePath(self, source, target):
         '''
@@ -253,9 +258,50 @@ class DirectedGraph:
         - Time O(E log V)
         - Space O(E + V)
         '''
-        return self.quickestPath(source, target)
+        # Get source and target vertex
+        srcVertex = self.graph[int(source)]
+        tgtVertex = self.graph[int(target)]
 
+        # Early exit if source or target vertex is banned
+        if srcVertex.banned or tgtVertex.banned:
+            return ([],-1)
 
+        # Initialise lists and min-heap
+        distances = [math.inf for i in range(len(self.graph))]
+        pred = [0 for i in range(len(self.graph))]
+
+        distances[srcVertex.num] = 0
+
+        discovered = MinHeap()
+        discovered.add(0, srcVertex.num)
+
+        # Loop over as long as there is a vertex in the discovered min-heap
+        while discovered.count > 0:
+            [uMinDist, u] = discovered.extractMin()
+
+            # Ensure the entry is not out of date
+            if distances[u] <= uMinDist:
+                # Get edges adjacent to current vertex
+                adjacentEdges = self.graph[u].connections
+
+                # Filter through outgoing edges and exclude banned vertices and edges
+                usableAdjacentEdges = []
+                for edge in adjacentEdges:
+                    if (not edge.u.banned) and (not edge.banned):
+                        usableAdjacentEdges.append(edge)
+
+                for edge in usableAdjacentEdges:
+                    v = edge.v.num
+                    edgeWeight = edge.w
+
+                    if distances[v] > distances[u] + edgeWeight:
+                        # Update distance entry and add entry to min-heap
+                        distances[v] = distances[u] + edgeWeight
+                        pred[v] = u
+                        discovered.add(distances[v], v)
+
+        # Now find the path from the source to the target and return
+        return self.tracePath(srcVertex, tgtVertex, distances, pred)
 
 
 def main():
@@ -278,6 +324,8 @@ def main():
     res2 = directedGraph.quickestSafePath("4","0")
 
     print(res2)
+
+    print(directedGraph)
 
 if __name__ == "__main__":
     main()

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment 4/camera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/camera.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment 4/roadPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/roadPath.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,24 +48,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="248" column="80" selection-start-line="248" selection-start-column="80" selection-end-line="248" selection-end-column="80" />
+              <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
               <folding>
                 <element signature="e#243#1701#0" />
                 <element signature="e#1804#2056#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assignment 4/camera.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -479,12 +471,12 @@
       <workItem from="1558055301620" duration="476000" />
       <workItem from="1558055897987" duration="6457000" />
       <workItem from="1558068963337" duration="5928000" />
-      <workItem from="1558602558866" duration="5496000" />
+      <workItem from="1558602558866" duration="7486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330019000" />
+    <option name="totallyTimeSpent" value="332009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,7 +514,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info active="true" anchor="bottom" x="636" y="188" width="718" height="376" id="Run" order="14" type="FLOATING" visible="true" weight="0.545749" />
+      <window_info active="true" anchor="bottom" x="515" y="237" width="718" height="376" id="Run" order="14" type="FLOATING" visible="true" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -534,7 +526,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" show_stripe_button="false" weight="0.32955465" />
       <window_info anchor="right" id="SciView" order="10" weight="0.32955465" />
-      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.49920508" weight="0.80269814" />
+      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.49920508" weight="0.80242914" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955595" visible="true" weight="0.24939272" />
@@ -608,7 +600,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FIT2004$lol.coverage" NAME="lol Coverage Results" MODIFIED="1557288138117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$roadPath.coverage" NAME="roadPath Coverage Results" MODIFIED="1558609626257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
+    <SUITE FILE_PATH="coverage/FIT2004$roadPath.coverage" NAME="roadPath Coverage Results" MODIFIED="1558611615115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
     <SUITE FILE_PATH="coverage/FIT2004$pairsSum.coverage" NAME="pairsSum Coverage Results" MODIFIED="1557998633970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
     <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557459268002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
     <SUITE FILE_PATH="coverage/FIT2004$tuteWk9.coverage" NAME="tuteWk9 Coverage Results" MODIFIED="1557188151227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 9" />
@@ -868,21 +860,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/camera.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="248" column="80" selection-start-line="248" selection-start-column="80" selection-end-line="248" selection-end-column="80" />
+          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
           <folding>
             <element signature="e#243#1701#0" />
             <element signature="e#1804#2056#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 4/camera.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
