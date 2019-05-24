@@ -76,7 +76,7 @@ class MinHeap:
             self.sink(1)
             return oldRoot
 
-class DirectedGraph:
+class Graph:
     def __init__(self):
         self.graph = []
 
@@ -251,8 +251,6 @@ class DirectedGraph:
             - Source vertex banned
             - Target vertex banned
 
-        TODO: Bug where if target vertex is banned -> It can still be accessible
-
         Same inputs and outputs
         Complexity
         - Time O(E log V)
@@ -303,29 +301,54 @@ class DirectedGraph:
         # Now find the path from the source to the target and return
         return self.tracePath(srcVertex, tgtVertex, distances, pred)
 
+    def addService(self, filename_service):
+        # Retrieve required vertices from file
+        vertexFile = open(filename_service, 'r')
+        reqVertices = []
+        for line in vertexFile:
+            if len(line) > 0:
+                reqVertices.append(int(line.strip()))
+        vertexFile.close()
+
+        #
+        print(reqVertices)
+
+        pass
+
+    def quickestDetourPath(self, source, target):
+        '''
+        Complexity
+            - Time O(E log V)
+            - Space O(E + V)
+        '''
+        pass
 
 def main():
-    ### TASK 1
     task1FileName = "basicGraph.txt"
-    directedGraph = DirectedGraph()
+    graph = Graph()
 
-    directedGraph.buildGraph(task1FileName)
+    graph.buildGraph(task1FileName)
 
-    # print(directedGraph)
-    #
-    # res1 = directedGraph.quickestPath("9", "9")
-    # print(res1)
+    print(graph)
+
+    ### TASK 1
+    source = "4"
+    target = "0"
+    res1 = graph.quickestPath(source, target)
 
     ### TASK 2
     filename_camera, filename_toll = 'camera.txt', 'toll.txt'
+    graph.augmentGraph(filename_camera, filename_toll)
+    res2 = graph.quickestSafePath(source, target)
 
-    directedGraph.augmentGraph(filename_camera, filename_toll)
+    ### TASK 3
+    filename_service = 'servicePoint.txt'
+    graph.addService(filename_service)
 
-    res2 = directedGraph.quickestSafePath("4","0")
 
-    print(res2)
 
-    print(directedGraph)
+
+
 
 if __name__ == "__main__":
     main()
