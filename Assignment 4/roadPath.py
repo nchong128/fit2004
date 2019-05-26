@@ -78,6 +78,15 @@ class MinHeap:
 
 class Graph:
     def __init__(self):
+        '''
+        Initial constructor
+        Time complexity: O(1)
+        Space complexity: O(1)
+        Error handle: None
+        Return: None
+        Parameter: None
+        Precondition: None
+        '''
         self.graph = []
 
     def __str__(self):
@@ -94,18 +103,29 @@ class Graph:
         return final
 
     def buildGraph(self, filename_roads):
-        # Read file and place info all into a table
+        '''
+        This function builds the graph based on a given file
+        Time complexity: TODO
+        Space complexity: O(E + V)
+        Error handle: None
+        Return: None
+        Parameter: filename_roads: Name of the file to build a graph from
+        Precondition: None
+        '''
+
+        # Read file and place all info into a table
         file = open(filename_roads, 'r')
 
         fileInfo = []
         for line in file:
-            line = line.strip().split(" ")
+            if len(line) > 0:
+                line = line.strip().split(" ")
 
-            line[0] = int(line[0])
-            line[1] = int(line[1])
-            line[2] = float(line[2])
+                line[0] = int(line[0])
+                line[1] = int(line[1])
+                line[2] = float(line[2])
 
-            fileInfo.append(line)
+                fileInfo.append(line)
 
         file.close()
 
@@ -132,23 +152,24 @@ class Graph:
 
     def quickestPath(self, source, target):
         '''
+        This function finds the quickest path from a source vertex to a destination vertex
+        Time complexity: O(E log V)
+        Space complexity: O(E + V)
+        Error handle: None
+        Return:
+            - tuple containing:
+                - list(contains nodes in the order of the quickest path traversal from source to target)
+                - time storing the total time required from reaching the target from the source
+        Parameter:
+            - source = String of the source vertex
+            - target = String of the target vertex
+        Precondition:
+            - source and target are valid vertices
         Cases
             - Source = target
-            -
-
-        :param source: Starting point of the travel
-        :param target: Destination point of the travel
-        :return:
-        tuple:
-        - list(contains nodes in the order of the quickest path traversal from source to target)
-        - time storing the total time required from reaching the target from the source
-
-        -- Should return ([],-1) if path does not exist
-
-        Complexity
-        - Time complexity of O(E log V)
-        - Space complexity O(E + V) (original graph)
+            - Normal case
         '''
+
         # Get source and target vertex
         srcVertex = self.graph[int(source)]
         tgtVertex = self.graph[int(target)]
@@ -181,29 +202,65 @@ class Graph:
                         pred[v] = u
                         discovered.add(distances[v], v)
 
+        print(distances, pred)
         # Now find the path from the source to the target and return
         return self.tracePath(srcVertex, tgtVertex, distances, pred)
 
     def tracePath(self, srcVertex, tgtVertex, distances, pred):
+        '''
+        This function traces the path from a source vertex to a target vertex
+        based on the computed distances and pred lists
+        Time complexity: TODO
+        Space complexity: TODO
+        Error handle: None
+        Return:
+            - tuple containing:
+                - list(contains nodes in the order of the quickest path traversal from source to target)
+                - time storing the total time required from reaching the target from the source
+        Parameter:
+            - srcVertex: Vertex representing the source vertex
+            - tgtVertex: Vertex representing the target vertex
+            - distances: List of the distance to a given vertex (at the index)
+            - pred: List containing the vertex directed toward the vertex at the index
+        Precondition:
+            - distances and pred are calculated from the caller function
+
+        '''
         # Get total distance
         totalDistance = distances[tgtVertex.num]
 
         if totalDistance != math.inf:
+            # Start at the target vertex and trace backwards
             current = tgtVertex.num
             path = []
 
+            # Keep inserting the vertex until we trace back to the source
             while current != srcVertex.num:
                 path.insert(0, current)
                 current = pred[current]
 
             path.insert(0, srcVertex.num)
         else:
+            # If the distance to the target is infinite, there is no path there
             path = []
             totalDistance = -1
 
         return (path, totalDistance)
 
     def augmentGraph(self, filename_camera, filename_toll):
+        '''
+        This function changes the graph to now account for banned vertices and
+        banned edges.
+        Time complexity: TODO
+        Space complexity: O(V + E)
+        Error handle: None
+        Return: None
+        Parameter:
+            - filename_camera: Name of text file containing list of red-light cameras
+            - filename_toll: Name of text file containing the list of tolls
+        Precondition:
+            - None
+        '''
         # Retrieve banned vertices from file
         cameraFile = open(filename_camera, 'r')
         bannedVertices = []
@@ -212,7 +269,7 @@ class Graph:
                 bannedVertices.append(int(line.strip()))
         cameraFile.close()
 
-        # Ban vertices
+        # Mark vertices as banned
         for vertex in bannedVertices:
             self.graph[vertex].ban()
 
@@ -227,14 +284,14 @@ class Graph:
                 bannedEdges.append(line)
         tollFile.close()
 
-        # Remove all banned edges
+        # Iterate over edges to ban
         for bannedEdge in bannedEdges:
             # Get source vertex for banned edge
             srcVertex = self.graph[bannedEdge[0]]
 
             # Search for an edge from source vertex to the target vertex
             for i in range(len(srcVertex.connections)):
-                # Match found, ban the edge
+                # Match found, mark the edge as banned
                 if srcVertex.connections[i].v.num == bannedEdge[1]:
                     edgeToBan = srcVertex.connections[i]
                     edgeToBan.ban()
@@ -242,19 +299,26 @@ class Graph:
 
     def quickestSafePath(self, source, target):
         '''
-        Now account for a safe path
-        - None of the vertices within the path contain a red-light camera
-        - None of the edges along the path are toll roads
-
-        Cases:
+        This function finds the quickest path from a source vertex to a destination vertex
+        WITH the additional constraint of avoiding banned edges/vertices
+        Time complexity: O(E log V)
+        Space complexity: O(E + V)
+        Error handle: None
+        Return:
+            - tuple containing:
+                - list(contains nodes in the order of the quickest path traversal from source to target)
+                - time storing the total time required from reaching the target from the source
+        Parameter:
+            - source = String of the source vertex
+            - target = String of the target vertex
+        Precondition:
+            - source and target are valid vertices
+        Cases
+            - Source = target
+            - Normal case
             - No vertices banned
             - Source vertex banned
             - Target vertex banned
-
-        Same inputs and outputs
-        Complexity
-        - Time O(E log V)
-        - Space O(E + V)
         '''
         # Get source and target vertex
         srcVertex = self.graph[int(source)]
@@ -310,7 +374,6 @@ class Graph:
                 reqVertices.append(int(line.strip()))
         vertexFile.close()
 
-        #
         print(reqVertices)
 
         pass
@@ -332,23 +395,28 @@ def main():
     print(graph)
 
     ### TASK 1
-    source = "4"
-    target = "0"
-    res1 = graph.quickestPath(source, target)
+    source, target = "4", "2"
+    quickestPathRes = graph.quickestPath(source, target)
+
+    print(quickestPathRes)
 
     ### TASK 2
     filename_camera, filename_toll = 'camera.txt', 'toll.txt'
     graph.augmentGraph(filename_camera, filename_toll)
-    res2 = graph.quickestSafePath(source, target)
+    quickestSafePathRes = graph.quickestSafePath(source, target)
 
     ### TASK 3
     filename_service = 'servicePoint.txt'
     graph.addService(filename_service)
 
-
-
-
-
-
 if __name__ == "__main__":
+    '''
+    --
+    Time complexity:
+    Space complexity:
+    Error handle:
+    Return:
+    Parameter:
+    Precondition:
+    '''
     main()
