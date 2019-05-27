@@ -44,22 +44,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="410" lean-forward="true" selection-start-line="410" selection-end-line="410" />
+              <caret line="410" selection-start-line="410" selection-end-line="410" />
               <folding>
                 <element signature="e#31#183#0" />
                 <element signature="e#392#1850#0" />
-                <element signature="e#1897#2013#0" />
-                <element signature="e#1945#2197#0" />
-                <element signature="e#2461#3955#0" />
-                <element signature="e#3451#5337#0" />
-                <element signature="e#6126#6666#0" />
-                <element signature="e#7779#9130#0" />
-                <element signature="e#7228#9386#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="142" column="19" selection-start-line="142" selection-start-column="19" selection-end-line="142" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -160,12 +162,12 @@
         <option value="$PROJECT_DIR$/Assignment 3/test4.txt" />
         <option value="$PROJECT_DIR$/Assignment 3/test1.txt" />
         <option value="$PROJECT_DIR$/Assignment 3/test3.txt" />
-        <option value="$PROJECT_DIR$/Assignment 3/trie.py" />
         <option value="$PROJECT_DIR$/Week 1/pairsSum.py" />
         <option value="$PROJECT_DIR$/Week 1/stackQueue.py" />
         <option value="$PROJECT_DIR$/Assignment 4/camera.txt" />
         <option value="$PROJECT_DIR$/Assignment 4/toll.txt" />
         <option value="$PROJECT_DIR$/Assignment 4/roadPath.py" />
+        <option value="$PROJECT_DIR$/Assignment 3/trie.py" />
       </list>
     </option>
   </component>
@@ -185,13 +187,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
               <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment 3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
@@ -203,6 +209,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -477,11 +484,12 @@
       <workItem from="1558602558866" duration="12247000" />
       <workItem from="1558790839628" duration="1935000" />
       <workItem from="1558840172284" duration="9321000" />
+      <workItem from="1558921051104" duration="2390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348026000" />
+    <option name="totallyTimeSpent" value="350416000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,7 +504,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49162012" weight="0.28330523" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49162012" weight="0.2825911" />
       <window_info id="Structure" order="1" sideWeight="0.5083799" side_tool="true" weight="0.2834008" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -814,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7616">
-          <caret line="448" column="28" lean-forward="true" selection-start-line="448" selection-start-column="28" selection-end-line="448" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/decipher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -875,18 +876,18 @@
     <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="410" lean-forward="true" selection-start-line="410" selection-end-line="410" />
+          <caret line="410" selection-start-line="410" selection-end-line="410" />
           <folding>
             <element signature="e#31#183#0" />
             <element signature="e#392#1850#0" />
-            <element signature="e#1897#2013#0" />
-            <element signature="e#1945#2197#0" />
-            <element signature="e#2461#3955#0" />
-            <element signature="e#3451#5337#0" />
-            <element signature="e#6126#6666#0" />
-            <element signature="e#7779#9130#0" />
-            <element signature="e#7228#9386#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 3/trie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="142" column="19" selection-start-line="142" selection-start-column="19" selection-end-line="142" selection-end-column="19" />
         </state>
       </provider>
     </entry>
