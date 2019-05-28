@@ -1,0 +1,11 @@
+1
+6
+NORMAL
+1 2 6
+D:5
+SAFE
+1 2 6
+D:5
+DETOUR
+1 3 7 6
+D:7

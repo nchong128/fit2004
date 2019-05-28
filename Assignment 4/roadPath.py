@@ -5,9 +5,13 @@ class Vertex:
         self.num = num
         self.connections = []
         self.banned = False
+        self.detour = False
 
     def ban(self):
         self.banned = True
+
+    def markAsDetour(self):
+        self.detour = True
 
 class Edge:
     def __init__(self, u, v, weight):
@@ -129,15 +133,16 @@ class Graph:
 
         file.close()
 
-        # Retrieve number of vertices to make based on the last row
-        numOfVertices = fileInfo[-1][0] + 1
-
-        # Make Vertex instances and add to graph attribute
-        for i in range(numOfVertices):
-            self.graph.append(Vertex(i))
-
-        # Now create Edges between the Vertices based on the info table
+        # Loop over every line of the file
         for i in range(len(fileInfo)):
+            # Check from the vertex IDs in this line whether more vertices need to be made
+            if max(fileInfo[i][0], fileInfo[i][1]) + 1 > len(self.graph):
+                # Add more vertices based on the line
+                newHighestVertex = max(fileInfo[i][0],fileInfo[i][1])
+
+                for j in range(len(self.graph), newHighestVertex + 1):
+                    self.graph.append(Vertex(j))
+
             # Retrieve source vertex based on line
             sourceVertex = self.graph[fileInfo[i][0]]
 
@@ -202,7 +207,6 @@ class Graph:
                         pred[v] = u
                         discovered.add(distances[v], v)
 
-        print(distances, pred)
         # Now find the path from the source to the target and return
         return self.tracePath(srcVertex, tgtVertex, distances, pred)
 
@@ -242,8 +246,7 @@ class Graph:
             path.insert(0, srcVertex.num)
         else:
             # If the distance to the target is infinite, there is no path there
-            path = []
-            totalDistance = -1
+            return [[],-1]
 
         return (path, totalDistance)
 
@@ -326,7 +329,7 @@ class Graph:
 
         # Early exit if source or target vertex is banned
         if srcVertex.banned or tgtVertex.banned:
-            return ([],-1)
+            return [[], -1]
 
         # Initialise lists and min-heap
         distances = [math.inf for i in range(len(self.graph))]
@@ -366,15 +369,20 @@ class Graph:
         return self.tracePath(srcVertex, tgtVertex, distances, pred)
 
     def addService(self, filename_service):
-        # Retrieve required vertices from file
+        # Retrieve detour vertices from file
         vertexFile = open(filename_service, 'r')
-        reqVertices = []
+        detourVertices = []
         for line in vertexFile:
             if len(line) > 0:
-                reqVertices.append(int(line.strip()))
+                detourVertices.append(int(line.strip()))
         vertexFile.close()
 
-        print(reqVertices)
+        # Mark vertices
+        for vertex in detourVertices:
+            # Get vertex
+            pass
+
+
 
         pass
 
@@ -392,22 +400,22 @@ def main():
 
     graph.buildGraph(task1FileName)
 
-    print(graph)
+    # print(graph)
 
     ### TASK 1
     source, target = "4", "2"
     quickestPathRes = graph.quickestPath(source, target)
 
-    print(quickestPathRes)
-
-    ### TASK 2
-    filename_camera, filename_toll = 'camera.txt', 'toll.txt'
-    graph.augmentGraph(filename_camera, filename_toll)
-    quickestSafePathRes = graph.quickestSafePath(source, target)
-
-    ### TASK 3
-    filename_service = 'servicePoint.txt'
-    graph.addService(filename_service)
+    # # print(quickestPathRes)
+    #
+    # ### TASK 2
+    # filename_camera, filename_toll = 'camera.txt', 'toll.txt'
+    # graph.augmentGraph(filename_camera, filename_toll)
+    # quickestSafePathRes = graph.quickestSafePath(source, target)
+    #
+    # ### TASK 3
+    # filename_service = 'servicePoint.txt'
+    # graph.addService(filename_service)
 
 if __name__ == "__main__":
     '''

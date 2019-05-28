@@ -1,0 +1,11 @@
+20
+29
+NORMAL
+20 24 29
+D:11
+SAFE
+None
+D:-1
+DETOUR
+None
+D:-1

@@ -1,0 +1,11 @@
+31
+0
+NORMAL
+None
+D:-1
+SAFE
+None
+D:-1
+DETOUR
+None
+D:-1

@@ -148,7 +148,7 @@ class PrefixTrie:
         Time complexity: Best: O(NM) == O(P) where N is the length of the longest prefix for the word, the indices
                                at the last letter. NOTE: THIS IS EQUIVALENT TO O(P).
                          Worst: O(NM) == O(P)
-        Space complexity: Best: O(NM) == O(P)
+        Space complexity: Beszt: O(NM) == O(P)
                          Worst: O(NM) == O(P)
         Error handling: None
         Precondition: The trie is filled with all of the suffixes of a word
