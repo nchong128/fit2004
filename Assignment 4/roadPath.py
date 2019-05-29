@@ -92,6 +92,8 @@ class Graph:
         Precondition: None
         '''
         self.graph = []
+        self.edgeList = []
+        self.numOfVertices = 0
 
     def __str__(self):
         final = ""
@@ -138,9 +140,9 @@ class Graph:
             # Check from the vertex IDs in this line whether more vertices need to be made
             if max(fileInfo[i][0], fileInfo[i][1]) + 1 > len(self.graph):
                 # Add more vertices based on the line
-                newHighestVertex = max(fileInfo[i][0],fileInfo[i][1])
+                self.numOfVertices = max(fileInfo[i][0],fileInfo[i][1])
 
-                for j in range(len(self.graph), newHighestVertex + 1):
+                for j in range(len(self.graph), self.numOfVertices + 1):
                     self.graph.append(Vertex(j))
 
             # Retrieve source vertex based on line
@@ -152,8 +154,22 @@ class Graph:
             # Retrieve weight based on line
             weight = fileInfo[i][2]
 
-            # Add edge between source vertex and target vertex
-            sourceVertex.connections.append(Edge(sourceVertex, targetVertex, weight))
+            # Create Edge and store in edgeList
+            edge = Edge(sourceVertex, targetVertex, weight)
+
+            self.edgeList.append(edge)
+
+            # Add edge to connections for source vertex
+            sourceVertex.connections.append(edge)
+
+    def rebuildGraph(self):
+        # Reset graph
+        self.graph = [Vertex(i) for i in range(self.numOfVertices)]
+
+        # Iterate over every edge in edgeList
+        for edge in self.edgeList:
+            # Add Edge to source vertex's connection list
+            edge.u.connections.append(edge)
 
     def quickestPath(self, source, target):
         '''
@@ -273,8 +289,8 @@ class Graph:
         cameraFile.close()
 
         # Mark vertices as banned
-        for vertex in bannedVertices:
-            self.graph[vertex].ban()
+        for vertexId in bannedVertices:
+            self.graph[vertexId].ban()
 
         # Retrieve banned edges from file
         tollFile = open(filename_toll, 'r')
@@ -288,14 +304,14 @@ class Graph:
         tollFile.close()
 
         # Iterate over edges to ban
-        for bannedEdge in bannedEdges:
+        for edgeId in bannedEdges:
             # Get source vertex for banned edge
-            srcVertex = self.graph[bannedEdge[0]]
+            srcVertex = self.graph[edgeId[0]]
 
             # Search for an edge from source vertex to the target vertex
             for i in range(len(srcVertex.connections)):
                 # Match found, mark the edge as banned
-                if srcVertex.connections[i].v.num == bannedEdge[1]:
+                if srcVertex.connections[i].v.num == edgeId[1]:
                     edgeToBan = srcVertex.connections[i]
                     edgeToBan.ban()
                     break
@@ -378,13 +394,13 @@ class Graph:
         vertexFile.close()
 
         # Mark vertices
-        for vertex in detourVertices:
-            # Get vertex
-            pass
+        for vertexId in detourVertices:
+            # Mark vertex as a detour
+            self.graph[vertexId].markAsDetour()
 
-
-
-        pass
+    def reverseAllEdges(self):
+        for edge in self.edgeList:
+            edge.u, edge.v = edge.v, edge.u
 
     def quickestDetourPath(self, source, target):
         '''
@@ -392,7 +408,66 @@ class Graph:
             - Time O(E log V)
             - Space O(E + V)
         '''
-        pass
+
+        ### Run forward Dijkstra's and save distances and pred
+        # Get source and target vertex
+        srcVertex = self.graph[int(source)]
+        tgtVertex = self.graph[int(target)]
+
+        # Initialise lists and min-heap
+        distances = [math.inf for i in range(len(self.graph))]
+        pred = [0 for i in range(len(self.graph))]
+
+        distances[srcVertex.num] = 0
+
+        discovered = MinHeap()
+        discovered.add(0, srcVertex.num)
+
+        # Loop over as long as there is a vertex in the discovered min-heap
+        while discovered.count > 0:
+            [uMinDist, u] = discovered.extractMin()
+
+            # Ensure the entry is not out of date
+            if distances[u] <= uMinDist:
+                # Get edges adjacent to current vertex
+                adjacentEdges = self.graph[u].connections
+
+                for edge in adjacentEdges:
+                    v = edge.v.num
+                    edgeWeight = edge.w
+
+                    if distances[v] > distances[u] + edgeWeight:
+                        # Update distance entry and add entry to min-heap
+                        distances[v] = distances[u] + edgeWeight
+                        pred[v] = u
+                        discovered.add(distances[v], v)
+
+        forwardRes = [distances, pred]
+
+        ### Reverse all edges
+        self.reverseAllEdges()
+        self.rebuildGraph()
+
+        print(self)
+
+
+
+        # print(self)
+
+        #         task 3
+        # --------
+        # - Run from source to target (E log V)
+        # - Reverse all edges (E)
+        # - Then rebuild graph (E)
+        # - Run from target to source (E log V)
+        # - Count all distances to the service point(V)
+        #
+        # -fix up graph
+
+
+
+
+
 
 def main():
     task1FileName = "basicGraph.txt"
@@ -406,16 +481,19 @@ def main():
     source, target = "4", "2"
     quickestPathRes = graph.quickestPath(source, target)
 
-    # # print(quickestPathRes)
-    #
-    # ### TASK 2
-    # filename_camera, filename_toll = 'camera.txt', 'toll.txt'
-    # graph.augmentGraph(filename_camera, filename_toll)
-    # quickestSafePathRes = graph.quickestSafePath(source, target)
-    #
-    # ### TASK 3
-    # filename_service = 'servicePoint.txt'
-    # graph.addService(filename_service)
+    # print(quickestPathRes)
+
+    ### TASK 2
+    filename_camera, filename_toll = 'camera.txt', 'toll.txt'
+    graph.augmentGraph(filename_camera, filename_toll)
+    quickestSafePathRes = graph.quickestSafePath(source, target)
+
+    ### TASK 3
+    filename_service = 'servicePoint.txt'
+    graph.addService(filename_service)
+    graph.quickestDetourPath(source, target)
+
+
 
 if __name__ == "__main__":
     '''

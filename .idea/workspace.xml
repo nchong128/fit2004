@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 3/trie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 3/trie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 4/basicGraph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/basicGraph.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 4/camera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/camera.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment 4/roadPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/roadPath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment 4/toll.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/toll.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,15 +46,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="416" selection-start-line="416" selection-end-line="425" selection-end-column="40" />
+            <state relative-caret-position="102">
+              <caret line="451" column="8" selection-start-line="451" selection-start-column="8" selection-end-line="451" selection-end-column="8" />
               <folding>
                 <element signature="e#476#1934#0" />
-                <element signature="e#2241#2493#0" />
               </folding>
             </state>
           </provider>
@@ -75,10 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.key</find>
-      <find>her</find>
-      <find>breeding</find>
-      <find>event</find>
       <find>world</find>
       <find>in</find>
       <find>repl</find>
@@ -103,8 +94,12 @@
       <find>required</find>
       <find>,-1</find>
       <find>([]</find>
-      <find>print</find>
       <find>trace</find>
+      <find>([</find>
+      <find>bannedEdg</find>
+      <find>buil</find>
+      <find>build</find>
+      <find>print</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LG4000\Documents\FIT2004\Week 5</dir>
@@ -260,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.roadPath">
+  <component name="RunManager" selected="Python.Tester">
     <configuration default="true" type="Java Scratch">
       <option name="ALTERNATIVE_JRE_PATH" value="Java 11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -389,8 +384,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.roadPath" />
         <item itemvalue="Python.Tester" />
+        <item itemvalue="Python.roadPath" />
         <item itemvalue="Python.pairsSum" />
         <item itemvalue="Python.tester" />
         <item itemvalue="Python.trie" />
@@ -480,12 +475,13 @@
       <workItem from="1558840172284" duration="9321000" />
       <workItem from="1558921051104" duration="2390000" />
       <workItem from="1558943657246" duration="14000" />
-      <workItem from="1559007037068" duration="6250000" />
+      <workItem from="1559007037068" duration="10911000" />
+      <workItem from="1559108320554" duration="1650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356680000" />
+    <option name="totallyTimeSpent" value="362991000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -523,7 +519,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" x="47" y="89" width="1187" height="502" id="Run" order="14" type="FLOATING" weight="0.545749" />
+      <window_info anchor="bottom" x="133" y="80" width="1015" height="521" id="Run" order="14" type="FLOATING" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -609,9 +605,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FIT2004$lol.coverage" NAME="lol Coverage Results" MODIFIED="1557288138117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$roadPath.coverage" NAME="roadPath Coverage Results" MODIFIED="1559025778513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
+    <SUITE FILE_PATH="coverage/FIT2004$roadPath.coverage" NAME="roadPath Coverage Results" MODIFIED="1559027721546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
     <SUITE FILE_PATH="coverage/FIT2004$pairsSum.coverage" NAME="pairsSum Coverage Results" MODIFIED="1557998633970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$Tester.coverage" NAME="Tester Coverage Results" MODIFIED="1559021358838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
+    <SUITE FILE_PATH="coverage/FIT2004$Tester.coverage" NAME="Tester Coverage Results" MODIFIED="1559125142074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
     <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557459268002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
     <SUITE FILE_PATH="coverage/FIT2004$tuteWk9.coverage" NAME="tuteWk9 Coverage Results" MODIFIED="1557188151227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 9" />
     <SUITE FILE_PATH="coverage/FIT2004$reverseInt.coverage" NAME="reverseInt Coverage Results" MODIFIED="1557197729280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
@@ -840,9 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 4/servicePoint.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/toll.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -880,13 +873,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/servicePoint.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="416" selection-start-line="416" selection-end-line="425" selection-end-column="40" />
+        <state relative-caret-position="102">
+          <caret line="451" column="8" selection-start-line="451" selection-start-column="8" selection-end-line="451" selection-end-column="8" />
           <folding>
             <element signature="e#476#1934#0" />
-            <element signature="e#2241#2493#0" />
           </folding>
         </state>
       </provider>
