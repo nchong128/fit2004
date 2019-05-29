@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9039e33a-abf8-4336-93c3-88590691794c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment 4/roadPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 4/roadPath.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,16 +44,28 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="FIT2004" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="451" column="8" selection-start-line="451" selection-start-column="8" selection-end-line="451" selection-end-column="8" />
+            <state relative-caret-position="340">
+              <caret line="570" lean-forward="true" selection-start-line="570" selection-end-line="570" />
               <folding>
                 <element signature="e#476#1934#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assignment 4/custom/servicePoint.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -70,10 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>world</find>
-      <find>in</find>
-      <find>repl</find>
-      <find>pdf</find>
       <find>offset</find>
       <find>TEST</find>
       <find>DEF WORD</find>
@@ -100,6 +107,10 @@
       <find>buil</find>
       <find>build</find>
       <find>print</find>
+      <find>0</find>
+      <find>markas</find>
+      <find>__init</find>
+      <find>reverse a</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LG4000\Documents\FIT2004\Week 5</dir>
@@ -111,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assignment 1/Writing.txt" />
         <option value="$PROJECT_DIR$/Assignment 1/sampleText/punctuationStartEnd.txt" />
         <option value="$PROJECT_DIR$/Week 3/reverseInsertionSort.py" />
         <option value="$PROJECT_DIR$/Week 3/croc.py" />
@@ -161,6 +171,7 @@
         <option value="$PROJECT_DIR$/Assignment 4/camera.txt" />
         <option value="$PROJECT_DIR$/Assignment 4/toll.txt" />
         <option value="$PROJECT_DIR$/Assignment 3/trie.py" />
+        <option value="$PROJECT_DIR$/Assignment 4/custom/servicePoint.txt" />
         <option value="$PROJECT_DIR$/Assignment 4/roadPath.py" />
       </list>
     </option>
@@ -193,6 +204,12 @@
               <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
               <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
               <item name="Assignment 4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FIT2004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FIT2004" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment 4" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -476,12 +493,12 @@
       <workItem from="1558921051104" duration="2390000" />
       <workItem from="1558943657246" duration="14000" />
       <workItem from="1559007037068" duration="10911000" />
-      <workItem from="1559108320554" duration="1650000" />
+      <workItem from="1559108320554" duration="3672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="362991000" />
+    <option name="totallyTimeSpent" value="365013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,7 +520,7 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" weight="0.32955465" />
-      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
       <window_info id="Debug" order="8" weight="0.30040485" />
       <window_info anchor="bottom" id="Flutter Inspector" order="0" sideWeight="0.5007949" side_tool="true" weight="0.3556797" />
       <window_info anchor="bottom" id="Flutter Performance" order="1" side_tool="true" />
@@ -519,7 +536,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32774675" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="bottom" x="133" y="80" width="1015" height="521" id="Run" order="14" type="FLOATING" weight="0.545749" />
+      <window_info anchor="bottom" x="154" y="101" width="973" height="479" id="Run" order="14" type="FLOATING" weight="0.545749" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -605,42 +622,15 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FIT2004$lol.coverage" NAME="lol Coverage Results" MODIFIED="1557288138117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$roadPath.coverage" NAME="roadPath Coverage Results" MODIFIED="1559027721546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
+    <SUITE FILE_PATH="coverage/FIT2004$roadPath.coverage" NAME="roadPath Coverage Results" MODIFIED="1559127156152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
     <SUITE FILE_PATH="coverage/FIT2004$pairsSum.coverage" NAME="pairsSum Coverage Results" MODIFIED="1557998633970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
-    <SUITE FILE_PATH="coverage/FIT2004$Tester.coverage" NAME="Tester Coverage Results" MODIFIED="1559125142074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
+    <SUITE FILE_PATH="coverage/FIT2004$Tester.coverage" NAME="Tester Coverage Results" MODIFIED="1559127339612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 4" />
     <SUITE FILE_PATH="coverage/FIT2004$trie.coverage" NAME="trie Coverage Results" MODIFIED="1557459268002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
     <SUITE FILE_PATH="coverage/FIT2004$tuteWk9.coverage" NAME="tuteWk9 Coverage Results" MODIFIED="1557188151227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 9" />
     <SUITE FILE_PATH="coverage/FIT2004$reverseInt.coverage" NAME="reverseInt Coverage Results" MODIFIED="1557197729280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week 1" />
     <SUITE FILE_PATH="coverage/FIT2004$tester.coverage" NAME="tester Coverage Results" MODIFIED="1557734576687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment 3" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/PERSONALDICT4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" lean-forward="true" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/PERSONAL2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/PERSONALDICT1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/encrypted_10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_9.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 2/Input/E_10.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -829,13 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 4/basicGraph.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/toll.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -849,9 +832,6 @@
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment 4/test-01.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/test-03.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -876,10 +856,39 @@
     <entry file="file://$PROJECT_DIR$/Assignment 4/servicePoint.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/basicGraph.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/service.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/test-01.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/custom/toll.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/custom/camera.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/custom/basicGraph.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment 4/custom/servicePoint.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment 4/roadPath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="451" column="8" selection-start-line="451" selection-start-column="8" selection-end-line="451" selection-end-column="8" />
+        <state relative-caret-position="340">
+          <caret line="570" lean-forward="true" selection-start-line="570" selection-end-line="570" />
           <folding>
             <element signature="e#476#1934#0" />
           </folding>

@@ -5,13 +5,10 @@ class Vertex:
         self.num = num
         self.connections = []
         self.banned = False
-        self.detour = False
 
     def ban(self):
         self.banned = True
 
-    def markAsDetour(self):
-        self.detour = True
 
 class Edge:
     def __init__(self, u, v, weight):
@@ -93,7 +90,8 @@ class Graph:
         '''
         self.graph = []
         self.edgeList = []
-        self.numOfVertices = 0
+        self.highestVertexNum = 0
+        self.servicePoints = []
 
     def __str__(self):
         final = ""
@@ -140,9 +138,9 @@ class Graph:
             # Check from the vertex IDs in this line whether more vertices need to be made
             if max(fileInfo[i][0], fileInfo[i][1]) + 1 > len(self.graph):
                 # Add more vertices based on the line
-                self.numOfVertices = max(fileInfo[i][0],fileInfo[i][1])
+                self.highestVertexNum = max(fileInfo[i][0],fileInfo[i][1])
 
-                for j in range(len(self.graph), self.numOfVertices + 1):
+                for j in range(len(self.graph), self.highestVertexNum + 1):
                     self.graph.append(Vertex(j))
 
             # Retrieve source vertex based on line
@@ -163,13 +161,24 @@ class Graph:
             sourceVertex.connections.append(edge)
 
     def rebuildGraph(self):
-        # Reset graph
-        self.graph = [Vertex(i) for i in range(self.numOfVertices)]
+        # Create new graph
+        newGraph = [Vertex(i) for i in range(self.highestVertexNum + 1)]
 
         # Iterate over every edge in edgeList
         for edge in self.edgeList:
+            # Get source and target's number
+            srcNum = edge.u.num
+            tgtNum = edge.v.num
+
+            # Reassign edge to new graph's vertices
+            edge.u = newGraph[srcNum]
+            edge.v = newGraph[tgtNum]
+
             # Add Edge to source vertex's connection list
             edge.u.connections.append(edge)
+
+        # Make newGraph the current graph
+        self.graph = newGraph
 
     def quickestPath(self, source, target):
         '''
@@ -387,16 +396,11 @@ class Graph:
     def addService(self, filename_service):
         # Retrieve detour vertices from file
         vertexFile = open(filename_service, 'r')
-        detourVertices = []
+        self.servicePoints = []
         for line in vertexFile:
             if len(line) > 0:
-                detourVertices.append(int(line.strip()))
+                self.servicePoints.append(int(line.strip()))
         vertexFile.close()
-
-        # Mark vertices
-        for vertexId in detourVertices:
-            # Mark vertex as a detour
-            self.graph[vertexId].markAsDetour()
 
     def reverseAllEdges(self):
         for edge in self.edgeList:
@@ -448,13 +452,85 @@ class Graph:
         self.reverseAllEdges()
         self.rebuildGraph()
 
-        print(self)
+        ### Run backward's Dijkstra's and save distances and pred
+        # Get source and target vertex  (THIS IS REVERSED)
+        srcVertex = self.graph[int(target)]
+        tgtVertex = self.graph[int(source)]
+
+        # Initialise lists and min-heap
+        distances = [math.inf for i in range(len(self.graph))]
+        pred = [0 for i in range(len(self.graph))]
+
+        distances[srcVertex.num] = 0
+
+        discovered = MinHeap()
+        discovered.add(0, srcVertex.num)
+
+        # Loop over as long as there is a vertex in the discovered min-heap
+        while discovered.count > 0:
+            [uMinDist, u] = discovered.extractMin()
+
+            # Ensure the entry is not out of date
+            if distances[u] <= uMinDist:
+                # Get edges adjacent to current vertex
+                adjacentEdges = self.graph[u].connections
+
+                for edge in adjacentEdges:
+                    v = edge.v.num
+                    edgeWeight = edge.w
+
+                    if distances[v] > distances[u] + edgeWeight:
+                        # Update distance entry and add entry to min-heap
+                        distances[v] = distances[u] + edgeWeight
+                        pred[v] = u
+                        discovered.add(distances[v], v)
+
+        backwardRes = [distances, pred]
+
+
+        # print(forwardRes)
+        # print(backwardRes)
+
+        ### Count all distances to the service points
+        minDistance = math.inf
+        minServicePoint = None
+        for num in self.servicePoints:
+            totalDistance = forwardRes[0][num] + backwardRes[0][num]
+            # Compare against min and update if smaller
+            if totalDistance < minDistance:
+                minServicePoint = num
+                minDistance = totalDistance
+
+        # Early exit if no path
+        if minDistance == math.inf or minServicePoint == None:
+            return [[],-1]
+
+        # Get path results from source to service
+        forwardPath = self.tracePath(self.graph[int(source)], self.graph[minServicePoint], forwardRes[0], forwardRes[1])[0]
+
+        # Remove service point (to avoid duplicates)
+        forwardPath.pop()
+
+        # Get path results from target to service
+        backwardPath = self.tracePath(self.graph[int(target)], self.graph[minServicePoint], backwardRes[0], backwardRes[1])[0]
+
+
+        # Reverse backward path so it's service point to target
+        self.reverseList(backwardPath)
+        #
+        # print(forwardPath)
+        # print(backwardPath)
+
+        # Combine paths and distance and return
+        return (forwardPath + backwardPath, minDistance)
 
 
 
-        # print(self)
 
-        #         task 3
+
+
+
+        # task 3
         # --------
         # - Run from source to target (E log V)
         # - Reverse all edges (E)
@@ -464,13 +540,13 @@ class Graph:
         #
         # -fix up graph
 
-
-
-
+    def reverseList(self, list):
+        for i in range(len(list)//2):
+            list[i], list[len(list) -1 - i] = list[len(list) -1 - i], list[i]
 
 
 def main():
-    task1FileName = "basicGraph.txt"
+    task1FileName = "custom/basicGraph.txt"
     graph = Graph()
 
     graph.buildGraph(task1FileName)
@@ -484,14 +560,16 @@ def main():
     # print(quickestPathRes)
 
     ### TASK 2
-    filename_camera, filename_toll = 'camera.txt', 'toll.txt'
+    filename_camera, filename_toll = 'custom/camera.txt', 'custom/toll.txt'
     graph.augmentGraph(filename_camera, filename_toll)
     quickestSafePathRes = graph.quickestSafePath(source, target)
 
     ### TASK 3
-    filename_service = 'servicePoint.txt'
+    filename_service = 'custom/servicePoint.txt'
     graph.addService(filename_service)
-    graph.quickestDetourPath(source, target)
+    quickestDetourPathRes = graph.quickestDetourPath(source, target)
+
+    # print(quickestDetourPathRes)
 
 
 
