@@ -204,7 +204,7 @@ class Graph:
         '''
         This function finds the quickest path from a source vertex to a destination vertex
         Time complexity: O(E log V)
-        Space complexity: O(E + V)
+        Space complexity: O(V + E)
         Error handle: None
         Return:
             - tuple containing:
@@ -235,7 +235,7 @@ class Graph:
         discovered = MinHeap()
         discovered.add(0, srcVertex.num)
 
-        # Loop over as long as there is a vertex in the discovered min-heap
+        # Loop over as long as there is an entry in the discovered min-heap
         while discovered.count > 0:
             [uMinDist, u] = discovered.extractMin()
 
@@ -249,9 +249,11 @@ class Graph:
                     edgeWeight = edge.w
 
                     if distances[v] > distances[u] + edgeWeight:
-                        # Update distance entry and add entry to min-heap
+                        # Update distance and source of the current vertex
                         distances[v] = distances[u] + edgeWeight
                         pred[v] = u
+
+                        # Add entry to min-heap with an updated distance
                         discovered.add(distances[v], v)
 
         # Now find the path from the source to the target and return
@@ -395,15 +397,19 @@ class Graph:
         while discovered.count > 0:
             [uMinDist, u] = discovered.extractMin()
 
+            # Ignore if vertex is banned
+            if self.graph[u].banned:
+                continue
+
             # Ensure the entry is not out of date
             if distances[u] <= uMinDist:
                 # Get edges adjacent to current vertex
                 adjacentEdges = self.graph[u].connections
 
-                # Filter through outgoing edges and exclude banned vertices and edges
+                # Filter through outgoing edges and exclude banned edges
                 usableAdjacentEdges = []
                 for edge in adjacentEdges:
-                    if (not edge.u.banned) and (not edge.banned):
+                    if (not edge.banned):
                         usableAdjacentEdges.append(edge)
 
                 for edge in usableAdjacentEdges:
@@ -411,9 +417,11 @@ class Graph:
                     edgeWeight = edge.w
 
                     if distances[v] > distances[u] + edgeWeight:
-                        # Update distance entry and add entry to min-heap
+                        # Update distance and source of the current vertex
                         distances[v] = distances[u] + edgeWeight
                         pred[v] = u
+
+                        # Add entry to min-heap with an updated distance
                         discovered.add(distances[v], v)
 
         # Now find the path from the source to the target and return
@@ -503,7 +511,6 @@ class Graph:
         ### Run forward Dijkstra's and save distances and pred - O(E log V)
         # Get source and target vertex
         srcVertex = self.graph[int(source)]
-        tgtVertex = self.graph[int(target)]
 
         # Initialise lists and min-heap
         distances = [math.inf for i in range(len(self.graph))]
@@ -528,9 +535,11 @@ class Graph:
                     edgeWeight = edge.w
 
                     if distances[v] > distances[u] + edgeWeight:
-                        # Update distance entry and add entry to min-heap
+                        # Update distance and source of the current vertex
                         distances[v] = distances[u] + edgeWeight
                         pred[v] = u
+
+                        # Add entry to min-heap with an updated distance
                         discovered.add(distances[v], v)
 
         forwardRes = [distances, pred]
@@ -542,7 +551,6 @@ class Graph:
         ### Run backward's Dijkstra's and save distances and pred - O(E log V)
         # Get source and target vertex  (THIS IS REVERSED)
         srcVertex = self.graph[int(target)]
-        tgtVertex = self.graph[int(source)]
 
         # Initialise lists and min-heap
         distances = [math.inf for i in range(len(self.graph))]
@@ -629,7 +637,7 @@ def main():
     graph.buildGraph(task1FileName)
 
     ### TASK 1
-    source, target = "4", "2"
+    source, target = "4", "3"
     quickestPathRes = graph.quickestPath(source, target)
 
     ### TASK 2
@@ -641,6 +649,10 @@ def main():
     filename_service = 'custom/servicePoint.txt'
     graph.addService(filename_service)
     quickestDetourPathRes = graph.quickestDetourPath(source, target)
+
+    print(quickestPathRes)
+    print(quickestSafePathRes)
+    print(quickestDetourPathRes)
 
 
 if __name__ == "__main__":
