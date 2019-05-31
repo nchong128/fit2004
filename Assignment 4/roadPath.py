@@ -27,7 +27,6 @@ class Vertex:
         '''
         self.banned = True
 
-
 class Edge:
     def __init__(self, u, v, weight):
         '''
@@ -142,6 +141,7 @@ class Graph:
             for edge in vertex.connections:
                 final += " --{}--> {},".format(edge.w, edge.v.num)
 
+            final = final[:-1]
             final += "\n"
 
         return final
@@ -149,7 +149,7 @@ class Graph:
     def buildGraph(self, filename_roads):
         '''
         This function builds the graph based on a given file
-        Time complexity: O(VE)
+        Time complexity: O(E + V)
         Space complexity: O(E + V)
         Error handle: None
         Return: None
@@ -450,8 +450,8 @@ class Graph:
     def rebuildGraph(self):
         '''
         This function rebuilds the graph (to be used in task 3)
-        Time complexity: O(E)
-        Space complexity: O(1)
+        Time complexity: O(V + E)
+        Space complexity: O(V + E)
         Error handle: None
         Return: None
         Parameter: None
