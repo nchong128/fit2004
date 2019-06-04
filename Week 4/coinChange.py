@@ -1,16 +1,19 @@
 import math
 def coinChangeTopDown(coins, V):
-    minCoins = math.inf
+    memo = [math.inf] * V
+    memo[0] = 0
 
-    for i in range(0,N):
-        if coins[i] <= V:
-            c = 1 + memo[V - coins[i]]
+    for v in range(0,V):
+        minCoins = math.inf
 
-            if c < minCoins:
-                minCoins = c
+        for i in range(0, len(coins)):
+            if coins[i] <= V:
+                c = 1 + memo[V - coins[i]]
 
-    memo[V] = minCoins
+                if c < minCoins:
+                    minCoins = c
+        memo[V] = minCoins
 
-coinChangeTopDown([])
+coinChangeTopDown([9,5,6,1], 12)
 
 

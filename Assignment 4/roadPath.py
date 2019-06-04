@@ -217,9 +217,6 @@ class Graph:
             - target = String of the target vertex
         Precondition:
             - source and target are valid vertices
-        Cases
-            - Source = target
-            - Normal case
         '''
 
         # Get source and target vertex
@@ -369,12 +366,6 @@ class Graph:
             - target = String of the target vertex
         Precondition:
             - source and target are valid vertices
-        Cases
-            - Source = target
-            - Normal case
-            - No vertices banned
-            - Source vertex banned
-            - Target vertex banned
         '''
         # Get source and target vertex
         srcVertex = self.graph[int(source)]
@@ -631,28 +622,66 @@ class Graph:
             list[i], list[len(list) -1 - i] = list[len(list) -1 - i], list[i]
 
 def main():
-    task1FileName = "custom/basicGraph.txt"
+    lineSeparator = "---------------------------------------------------------------------"
     graph = Graph()
 
-    graph.buildGraph(task1FileName)
+    print(lineSeparator)
+    filename_roads = input("Enter the file name for the graph: ")
+    filename_camera = input("Enter the file name for the camera nodes: ")
+    filename_toll = input("Enter the file name for the toll roads: ")
+    filename_service = input("Enter the file name for the service nodes: ")
+
+    graph.buildGraph(filename_roads)
+
+    print(lineSeparator)
+
+    source = input("Source node: ")
+    target = input("Sink node: ")
+
+    print(lineSeparator)
 
     ### TASK 1
-    source, target = "4", "3"
     quickestPathRes = graph.quickestPath(source, target)
 
+    print("Quickest path: ")
+    if len(quickestPathRes[0]) > 0:
+        print(" --> ".join([str(elem) for elem in quickestPathRes[0]]))
+        print("Time: " + str(quickestPathRes[1]) + " minute(s)")
+    else:
+        print("No path exists")
+        print("Time: 0 minute(s)")
+
+    print(lineSeparator)
+
     ### TASK 2
-    filename_camera, filename_toll = 'custom/camera.txt', 'custom/toll.txt'
     graph.augmentGraph(filename_camera, filename_toll)
     quickestSafePathRes = graph.quickestSafePath(source, target)
 
+    print("Safe quickest path:")
+    if len(quickestSafePathRes[0]) > 0:
+        print(" --> ".join([str(elem) for elem in quickestSafePathRes[0]]))
+        print("Time: " + str(quickestSafePathRes[1]) + " minute(s)")
+    else:
+        print("No path exists")
+        print("Time: 0 minute(s)")
+
+    print(lineSeparator)
+
     ### TASK 3
-    filename_service = 'custom/servicePoint.txt'
     graph.addService(filename_service)
     quickestDetourPathRes = graph.quickestDetourPath(source, target)
 
-    print(quickestPathRes)
-    print(quickestSafePathRes)
-    print(quickestDetourPathRes)
+    print("Quickest detour path: ")
+    if len(quickestDetourPathRes[0]) > 0:
+        print(" --> ".join([str(elem) for elem in quickestDetourPathRes[0]]))
+        print("Time: " + str(quickestDetourPathRes[1]) + " minute(s)")
+    else:
+        print("No path exists")
+        print("Time: 0 minute(s)")
+
+    print(lineSeparator)
+
+    print("Program end")
 
 
 if __name__ == "__main__":
